@@ -327,7 +327,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -337,15 +337,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\yuto.K\F-unity\My project (5)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: b2e20000
-    m_LastClickedID: 58034
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: b4e20000
+    m_LastClickedID: 58036
     m_ExpandedIDs: 00000000b2e2000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -472,9 +472,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 58e30000
-      m_LastClickedID: 58200
-      m_ExpandedIDs: fa58ffffa85dffff
+      m_SelectedIDs: f0e20000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0e59ffffa85dffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.33851784, y: 0.5473669, z: -0.25702158, w: 0.720927}
     speed: 2
-    m_Value: {x: 0.33851773, y: 0.54736674, z: -0.2570215, w: 0.72092676}
+    m_Value: {x: 0.33851787, y: 0.5473669, z: -0.2570216, w: 0.72092706}
   m_Size:
     m_Target: 12.812038
     speed: 2
