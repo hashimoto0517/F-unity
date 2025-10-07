@@ -5,7 +5,7 @@ public class SelectScript : MonoBehaviour
     GameObject selectedObject = null; // 現在選択されているオブジェクト
     [SerializeField] Material selectedColor;
     [SerializeField] Material nomalColor;
-    int dis = 5;
+    [SerializeField] int dis = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,11 +16,14 @@ public class SelectScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //マウス左クリック検知
         if (Input.GetMouseButtonDown(0))
         {
+            //レイ飛ばす
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
+            //
             if (Physics.Raycast(ray, out hit))
             {
                 GameObject clickedObject = hit.collider.gameObject;
