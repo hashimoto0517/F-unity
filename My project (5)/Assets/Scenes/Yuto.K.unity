@@ -1286,6 +1286,9 @@ MonoBehaviour:
   mainCamera: {fileID: 330585543}
   subCamera: {fileID: 1315332793}
   rotationSpeed: 100
+  player: {fileID: 1170704344}
+  distance: 5
+  height: 2
 --- !u!4 &2088063619
 Transform:
   m_ObjectHideFlags: 0

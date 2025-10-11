@@ -6,11 +6,14 @@ public class CameraScript : MonoBehaviour
     [SerializeField] GameObject mainCamera;      // メインカメラ格納用
     [SerializeField] GameObject subCamera;       // サブカメラ格納用 
     [SerializeField] float rotationSpeed = 100f; // カメラの回転速度
+    [SerializeField] GameObject player;//プレイヤー格納
+    [SerializeField] float distance = 5f;//プレイヤーとの距離
+    [SerializeField] float height = 2f;//カメラ高さ
     private InputAction cameraSwitchAction;       // RBボタンの入力
     private InputAction cameraRotateAction;       // 右スティックの入力
 
-    private float pitch = 0f;                    // カメラの上下回転
-    private float yaw = 0f;                      // カメラの左右回転
+    private float pitch = 0f;                    // 上下回転
+    private float yaw = 0f;                      // 左右回転
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +42,9 @@ public class CameraScript : MonoBehaviour
         cameraRotateAction = new InputAction("CameraRotate", InputActionType.Value);
         cameraRotateAction.AddBinding("<Gamepad>/rightStick");
         cameraRotateAction.Enable();
+
+        //初期位置設定
+        UpdateCameraPosition(mainCamera);
     }
 
     // Update is called once per frame
@@ -53,12 +59,14 @@ public class CameraScript : MonoBehaviour
                 {
                     mainCamera.SetActive(false);
                     subCamera.SetActive(true);
+                    UpdateCameraPosition(subCamera);
                     Debug.Log("Switched to SubCamera");
                 }
                 else
                 {
                     mainCamera.SetActive(true);
                     subCamera.SetActive(false);
+                    UpdateCameraPosition(mainCamera);
                     Debug.Log("Switched to MainCamera");
                 }
             }
@@ -81,11 +89,25 @@ public class CameraScript : MonoBehaviour
                 pitch = Mathf.Clamp(pitch, -80f, 80f);
 
                 // カメラの回転を更新
-                activeCamera.transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
+                UpdateCameraPosition(activeCamera);
             }
         }
     }
 
+    private void UpdateCameraPosition(GameObject camera)
+    {
+        if (player == null || camera == null) return;
+        //プレイヤーからカメラ位置の設定
+        Vector3 playerPos = player.transform.position;
+        float x = playerPos.x + Mathf.Sin(yaw * Mathf.Deg2Rad) * distance;
+        float z = playerPos.z + Mathf.Cos(yaw * Mathf.Deg2Rad) * distance;
+        float y = playerPos.y + height + Mathf.Sin(pitch * Mathf.Deg2Rad) * distance;
+        // カメラの位置設定
+        camera.transform.position = new Vector3(x, y, z);
+
+        // カメラをプレイヤーの方向に向ける
+        camera.transform.LookAt(playerPos);
+    }
     // スクリプトが破棄される際にアクションを無効化
     void OnDestroy()
     {
