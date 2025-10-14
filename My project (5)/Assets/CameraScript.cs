@@ -3,18 +3,16 @@ using UnityEngine.InputSystem;
 
 public class CameraScript : MonoBehaviour
 {
-    [SerializeField] GameObject mainCamera;      // メインカメラ格納用
-    [SerializeField] GameObject subCamera;       // サブカメラ格納用 
+    [SerializeField] GameObject mainCamera;// メインカメラ格納用
+    [SerializeField] GameObject subCamera;// サブカメラ格納用 
     [SerializeField] float rotationSpeed = 100f; // カメラの回転速度
     [SerializeField] GameObject player;//プレイヤー格納
     [SerializeField] float distance = 5f;//プレイヤーとの距離
     [SerializeField] float height = 2f;//カメラ高さ
-    private InputAction cameraSwitchAction;       // RBボタンの入力
-    private InputAction cameraRotateAction;       // 右スティックの入力
-
-    private float pitch = 0f;                    // 上下回転
-    private float yaw = 0f;                      // 左右回転
-
+    private InputAction cameraSwitchAction;// RBボタンの入力
+    private InputAction cameraRotateAction;// 右スティックの入力
+    private float pitch = 0f;// 上下回転
+    private float yaw = 0f;// 左右回転
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,7 +42,7 @@ public class CameraScript : MonoBehaviour
         cameraRotateAction.Enable();
 
         //初期位置設定
-        UpdateCameraPosition(mainCamera);
+        UpdateCameraPosition(subCamera);
     }
 
     // Update is called once per frame
@@ -66,7 +64,6 @@ public class CameraScript : MonoBehaviour
                 {
                     mainCamera.SetActive(true);
                     subCamera.SetActive(false);
-                    UpdateCameraPosition(mainCamera);
                     Debug.Log("Switched to MainCamera");
                 }
             }
@@ -89,7 +86,7 @@ public class CameraScript : MonoBehaviour
                 pitch = Mathf.Clamp(pitch, -80f, 80f);
 
                 // カメラの回転を更新
-                UpdateCameraPosition(activeCamera);
+                UpdateCameraPosition(subCamera);
             }
         }
     }
