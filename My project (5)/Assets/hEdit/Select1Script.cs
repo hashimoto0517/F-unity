@@ -1,6 +1,7 @@
+//マウスで選択スクリプト
 using UnityEngine;
 
-public class SelectScript : MonoBehaviour
+public class Select1Script : MonoBehaviour
 {
     GameObject selectedObject = null; // 現在選択されているオブジェクト
     [SerializeField] Material selectedColor;
@@ -29,7 +30,7 @@ public class SelectScript : MonoBehaviour
                 GameObject clickedObject = hit.collider.gameObject;
                 float distance = Vector3.Distance(transform.position, clickedObject.transform.position);
 
-                if (distance < dis) 
+                if (distance < dis)
                 {
                     if (clickedObject.gameObject.tag == "Target")
                     {
