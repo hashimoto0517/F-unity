@@ -13,8 +13,8 @@ public class MoveTes : MonoBehaviour
     void Start()
     {
         Vector3 pos = transform.position;
-        posPlusLim = pos.x + 39f;
-        posMinusLim = pos.x - 39f;
+        posPlusLim = pos.x + 14f;
+        posMinusLim = pos.x - 14f;
 
         int maxDisplayCount = 2;
         for (int i = 0; i < maxDisplayCount && i < Display.displays.Length; i++)
