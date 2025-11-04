@@ -1,80 +1,105 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Select3Script : MonoBehaviour
 {
-    GameObject selectedObject = null; // 現在選択されているオブジェクト
-    
     [SerializeField] Material selectedColor;
     [SerializeField] Material nomalColor;
     [SerializeField] int dis = 5;
+    [SerializeField] float angle = 45f;
 
-    public float angle = 45f;
-    Collider select;
-    Renderer rend = null;
-    Renderer prevRend = null;
+    GameObject selectedObject = null;
+    Collider currentTarget = null;
+    InputAction selectAction;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        selectAction = new InputAction("Select", InputActionType.Button);
+        selectAction.AddBinding("<Gamepad>/buttonNorth"); // Yボタン
+        selectAction.AddBinding("<Mouse>/leftButton");    // 左クリック
+        selectAction.Enable();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //マウス左クリック検知
-        if (Input.GetMouseButtonDown(0))
+        if (selectAction != null && selectAction.WasPressedThisFrame())
         {
-            if (select != null && select.gameObject.tag == ("Target"))//視界の範囲内の当たり判定
-            {
-                //視界の角度内に収まっているか
-                Vector3 posDelta = select.transform.position - this.transform.position;
-                float target_angle = Vector3.Angle(this.transform.forward, posDelta);
-
-                if (target_angle < angle) //target_angleがangleに収まっているかどうか
-                {
-                    if (Physics.Raycast(this.transform.position, posDelta, out RaycastHit hit)) //Rayを使用してtargetに当たっているか判別
-                    {
-                        if (hit.collider == select)
-                        {
-                            //選択
-                            Debug.Log("選択成功: " + select.name);
-
-                            // 前回選択されたオブジェクトの色を戻す
-                            if (selectedObject != null && selectedObject != select.gameObject)
-                            {
-                                prevRend = selectedObject.GetComponent<Renderer>();
-                                if (prevRend != null) prevRend.material = nomalColor;
-                            }
-
-                            // 新しい選択対象に色を付ける
-                            rend = select.GetComponent<Renderer>();
-                            if (rend != null) rend.material = selectedColor;
-
-                            // 選択対象を記録
-                            selectedObject = select.gameObject;
-                        }
-                    }
-                }
-            }
+            TrySelect();
         }
     }
-    private void OnTriggerStay(Collider col)
+    private void TrySelect()
     {
-        if (col.gameObject.tag == "Target")
+        if (currentTarget == null || !currentTarget.CompareTag("Target")) 
+            return;
+
+        Vector3 dir = currentTarget.transform.position - transform.position;
+        if (Vector3.Angle(transform.forward, dir) > angle) 
+            return;
+
+        if (Physics.Raycast(transform.position, dir.normalized, out RaycastHit hit, dis) && hit.collider == currentTarget)
         {
-            select = col;
+            Select(currentTarget.gameObject);
         }
     }
 
-    private void OnTriggerExit(Collider col)
+    void Select(GameObject obj)
     {
-        if (col == select)
+        //違うものを選択した
+        if (selectedObject != null && selectedObject != obj)
         {
-            select = null;
+            Deselect(selectedObject);
         }
+
+        //新たに選択したオブジェクトのRendererいれる
+        var rend = obj.GetComponent<Renderer>();
+        if (rend != null && selectedObject != obj)
+        {
+            rend.material = selectedColor;
+        }
+        else if (selectedObject != null && selectedObject == obj)
+        {
+            Deselect(selectedObject);
+        }
+        else
+        {
+            Debug.Log("Rendererが見つかりません: " + obj.name);
+        }
+
+        selectedObject = obj;
+        Debug.Log("選択成功: " + obj.name);
+    }
+
+    void Deselect(GameObject obj)
+    {
+        var rend = obj.GetComponent<Renderer>();
+        if (rend != null)
+        {
+            rend.material = nomalColor;
+            Debug.Log("選択解除: " + obj.name);
+        }
+        else
+        {
+            Debug.Log("選択解除対象にRendererが見つかりません: " + obj.name);
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Target")) currentTarget = other;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other == currentTarget) currentTarget = null;
+    }
+
+    void OnDestroy()
+    {
+        selectAction?.Disable();
+        selectAction?.Dispose();
     }
 }
 
