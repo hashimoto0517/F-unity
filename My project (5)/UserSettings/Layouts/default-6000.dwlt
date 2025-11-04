@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1280
     height: 677.3334
   m_ShowMode: 4
-  m_Title: "\u30B2\u30FC\u30E0"
+  m_Title: "\u30A4\u30F3\u30B9\u30DA\u30AF\u30BF\u30FC"
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -94,7 +94,7 @@ MonoBehaviour:
     x: 0
     y: 414
     width: 1001.3333
-    height: 207.33337
+    height: 207.33331
   m_MinSize: {x: 231, y: 276}
   m_MaxSize: {x: 10001, y: 10026}
   m_ActualView: {fileID: 14}
@@ -123,7 +123,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1001.3333
-    height: 621.3334
+    height: 621.3333
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
@@ -150,7 +150,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1280
-    height: 677.3334
+    height: 677.3333
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -199,11 +199,11 @@ MonoBehaviour:
     x: 0
     y: 36
     width: 1280
-    height: 621.3334
+    height: 621.3333
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 37
+  controlID: 92
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 657.3334
+    y: 657.3333
     width: 1280
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -271,9 +271,9 @@ MonoBehaviour:
     x: 1001.3333
     y: 0
     width: 278.6667
-    height: 621.3334
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+    height: 621.3333
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -339,7 +339,7 @@ MonoBehaviour:
     x: 1001.3334
     y: 78.66667
     width: 277.6667
-    height: 595.3334
+    height: 595.3333
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -388,7 +388,7 @@ MonoBehaviour:
     x: 0
     y: 492.6667
     width: 1000.3333
-    height: 181.33337
+    height: 181.33331
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -411,7 +411,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Yuto.K
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -421,16 +421,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Yuto.K
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\yuto.K\F-unity\My project (5)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 62.666687}
-    m_SelectedIDs: 6ee50000
-    m_LastClickedID: 58734
-    m_ExpandedIDs: 000000005ee5000000ca9a3bffffff7f
+    m_SelectedIDs: b8e60000
+    m_LastClickedID: 59064
+    m_ExpandedIDs: 00000000b8e6000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1015,9 +1015,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 264.7476, y: 983.4617, z: -194.27586}
+    m_Target: {x: 508.402, y: 1073.7815, z: -20.819029}
     speed: 2
-    m_Value: {x: 264.7476, y: 983.4617, z: -194.27586}
+    m_Value: {x: 508.402, y: 1073.7815, z: -20.819029}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1063,13 +1063,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.14399911, y: -0.0021806227, z: 0.0003199847, w: 0.9895903}
+    m_Target: {x: -0.006499334, y: -0.01820278, z: -0.00011633883, w: 0.9998304}
     speed: 2
-    m_Value: {x: 0.14399698, y: -0.0021805905, z: 0.00031997997, w: 0.9895757}
+    m_Value: {x: -0.006499222, y: -0.018202467, z: -0.000116336836, w: 0.99981326}
   m_Size:
-    m_Target: 62.01107
+    m_Target: 590.4796
     speed: 2
-    m_Value: 62.01107
+    m_Value: 590.4796
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1142,9 +1142,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fa23ffff
-      m_LastClickedID: -56326
-      m_ExpandedIDs: 0652ffffc256fffff6e5000014e60000
+      m_SelectedIDs: bce70000
+      m_LastClickedID: 59324
+      m_ExpandedIDs: 284dffff6652ffff50e7000074e70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
