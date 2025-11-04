@@ -99,3 +99,6 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+git rm --cached "UserSettings/Layouts/default-6000.dwlt"
+git commit -m "Stop tracking default-6000.dwlt"
