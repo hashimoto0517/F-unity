@@ -4359,7 +4359,7 @@ MonoBehaviour:
   rotationSpeed: 100
   player: {fileID: 2067884534}
   distance: 5
-  height: 2
+  height: 8
 --- !u!1 &2119048544
 GameObject:
   m_ObjectHideFlags: 0

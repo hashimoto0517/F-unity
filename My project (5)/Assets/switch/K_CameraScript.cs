@@ -86,7 +86,7 @@ public class K_CameraScript : MonoBehaviour
                         subCameraYaw = Mathf.Atan2(-mainCameraDirection.x, -mainCameraDirection.z) * Mathf.Rad2Deg;
                         // pitchを計算
                         subCameraPitch = -Mathf.Asin(mainCameraDirection.y) * Mathf.Rad2Deg;
-                        subCameraPitch = Mathf.Clamp(subCameraPitch, -30f, 30f); // 自然な高さにする
+                        subCameraPitch = Mathf.Clamp(subCameraPitch, -70f, 50f); // 自然な高さにする
                     }
                     UpdateThirdPersonCameraPosition(subCamera); // 三人称カメラ位置を更新
                     Debug.Log("Switched to SubCamera (Third Person)");
@@ -125,7 +125,7 @@ public class K_CameraScript : MonoBehaviour
                     // 一人称カメラの回転
                     mainCameraYaw += stickInput.x * rotationSpeed * Time.deltaTime;
                     mainCameraPitch -= stickInput.y * rotationSpeed * Time.deltaTime;
-                    mainCameraPitch = Mathf.Clamp(mainCameraPitch, -80f, 80f);
+                    mainCameraPitch = Mathf.Clamp(mainCameraPitch, -50f, 50f);
                     UpdateFirstPersonCameraPosition(mainCamera); // 一人称（自転）
                 }
                 else
@@ -133,7 +133,7 @@ public class K_CameraScript : MonoBehaviour
                     // 三人称カメラの回転
                     subCameraYaw += stickInput.x * rotationSpeed * Time.deltaTime;
                     subCameraPitch -= stickInput.y * rotationSpeed * Time.deltaTime;
-                    subCameraPitch = Mathf.Clamp(subCameraPitch, -30f, 30f); // ピッチ制限
+                    subCameraPitch = Mathf.Clamp(subCameraPitch, -90f, 90f); // ピッチ制限
                     UpdateThirdPersonCameraPosition(subCamera); // 三人称
                 }
             }
