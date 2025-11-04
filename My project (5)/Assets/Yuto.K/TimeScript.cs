@@ -1,16 +1,46 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TimeScript : MonoBehaviour
+public class CountdownTimer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private Image minImage; // ï™
+    [SerializeField] private Image tenImage; // 10ÇÃà 
+    [SerializeField] private Image oneImage; // 1ÇÃà 
+    [SerializeField] private Sprite[] numberSprites; // 0Å`9
+    [SerializeField] private float countdownTime = 180f; // 3ï™Åi180ïbÅj
+    private float currentTime;
+    private bool isCounting;
     void Start()
     {
-        
+        currentTime = countdownTime;
+        isCounting = true;
+        UpdateTimerDisplay();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isCounting)
+        {
+            currentTime -= Time.deltaTime;
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+                isCounting = false;
+            }
+            UpdateTimerDisplay();
+        }
+    }
+    void UpdateTimerDisplay()
+    {
+        // êÆêîïîï™ÇéÊìæ
+        int totalSeconds = Mathf.FloorToInt(currentTime);
+        // ï™Ç∆ïbÇåvéZ
+        int minutes = totalSeconds / 60; // ï™
+        int seconds = totalSeconds % 60; // ïb
+        int tens = seconds / 10; // ïbÇÃ10ÇÃà 
+        int units = seconds % 10; // ïbÇÃ1ÇÃà 
+        // ÉXÉvÉâÉCÉgÇçXêV
+        minImage.sprite = numberSprites[minutes];
+        tenImage.sprite = numberSprites[tens];
+        oneImage.sprite = numberSprites[units];
     }
 }
