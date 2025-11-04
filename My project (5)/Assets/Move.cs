@@ -13,7 +13,7 @@ public class Move : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        Debug.Log("Start Position: " + transform.position);
         Vector3 pos = transform.position;
         posPlusLim = pos.x + 39f;
         posMinusLim = pos.x - 39f;
