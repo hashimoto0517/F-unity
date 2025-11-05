@@ -8,30 +8,21 @@ public class Move : MonoBehaviour
     float posPlusLim;
     float posMinusLim;
 
-    //public float rotationSpeed = 700f; // 回転速度
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("Start Position: " + transform.position);
         Vector3 pos = transform.position;
         posPlusLim = pos.x + 39f;
         posMinusLim = pos.x - 39f;
-
-        int maxDisplayCount = 2;
-        for (int i = 0; i < maxDisplayCount && i < Display.displays.Length; i++)
-        {
-            Display.displays[i].Activate();
-        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // 前後移動
-        Vector3 move = Vector3.forward * Input.GetAxis("Vertical") + Vector3.right * Input.GetAxis("Horizontal");
+        // 前後左右移動
+        Vector3 move = Vector3.forward * Input.GetAxis("Vertical")
+                     + Vector3.right * Input.GetAxis("Horizontal");
         transform.Translate(move * Time.deltaTime * speed);
 
+        // 移動範囲を制限
         Vector3 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, posMinusLim, posPlusLim);
         pos.z = Mathf.Clamp(pos.z, posMinusLim, posPlusLim);
