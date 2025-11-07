@@ -512,6 +512,143 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &482439182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482439183}
+  - component: {fileID: 482439186}
+  - component: {fileID: 482439185}
+  - component: {fileID: 482439184}
+  m_Layer: 0
+  m_Name: MainCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &482439183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482439182}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.306, y: 1.5370001, z: -4.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &482439184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482439182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+--- !u!81 &482439185
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482439182}
+  m_Enabled: 1
+--- !u!20 &482439186
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482439182}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &496285927
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +751,7 @@ Transform:
   m_GameObject: {fileID: 496285927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.041, y: 1.379, z: 3.71}
+  m_LocalPosition: {x: 4.041, y: -0.02, z: 3.71}
   m_LocalScale: {x: 1, y: 2.7986383, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -897,7 +1034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &845071156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,7 +1062,57 @@ Transform:
   m_GameObject: {fileID: 845071155}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27151, y: 1.35108, z: -0.41986}
+  m_LocalPosition: {x: 0.665, y: 1.35108, z: -0.41986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &877643956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 877643958}
+  - component: {fileID: 877643957}
+  m_Layer: 0
+  m_Name: CameraManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &877643957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877643956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b14d7fee183b94bb1c67a48dc5a6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 482439182}
+  subCamera: {fileID: 1023029249}
+  rotationSpeed: 100
+  player: {fileID: 1101273168}
+  distance: 5
+  height: 2
+--- !u!4 &877643958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877643956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.24694, y: -0.01, z: -0.82964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1033,7 +1220,7 @@ Transform:
   m_GameObject: {fileID: 884990635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.021, y: 0.283, z: 3.648}
+  m_LocalPosition: {x: 7.021, y: 0.02, z: 3.68}
   m_LocalScale: {x: 1, y: 0.8530269, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1141,12 +1328,149 @@ Transform:
   m_GameObject: {fileID: 966093793}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.036, y: -0.2, z: 3.7}
+  m_LocalPosition: {x: 6.036, y: -0.6, z: 3.7}
   m_LocalScale: {x: 1, y: 2.5478702, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1023029249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023029250}
+  - component: {fileID: 1023029253}
+  - component: {fileID: 1023029252}
+  - component: {fileID: 1023029251}
+  m_Layer: 0
+  m_Name: SubCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1023029250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023029249}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.3308274, y: -0, z: -0, w: 0.9436913}
+  m_LocalPosition: {x: 1.2709999, y: 4.45, z: -4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 38.638, y: 0, z: 0}
+--- !u!114 &1023029251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023029249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+--- !u!81 &1023029252
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023029249}
+  m_Enabled: 1
+--- !u!20 &1023029253
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023029249}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &1101273168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 31cbc3d4f5a501c4b9dc4de872d64e1f, type: 3}
@@ -1166,9 +1490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpeed: 0
   speed: 3
-  runSpeed: 2.5
+  runSpeed: 5
   jumpHight: 5
-  pPosition: {x: 0, y: 0, z: 0}
   forwardAmount: 0
   turnAmount: 0
   turnSpeed: 20
@@ -1182,10 +1505,13 @@ MonoBehaviour:
   isground: 1
   isRun: 0
   localPosition: {x: 0, y: 0, z: 0}
-  playerRadius: 0.2
   stepHeight: 0.5
-  stepSpeed: 5
-  stepCheckDistance: 0.3
+  stepSpeed: 2.5
+  stepCheckDistance: 0.4
+  mainCameraTransform: {fileID: 482439183}
+  subCameraTransform: {fileID: 1023029250}
+  mainCamera: {fileID: 482439182}
+  isFirstPerson: 0
 --- !u!136 &1101273170
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1298,7 +1624,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 949b28c7-b70b-43de-bb23-ba297d2081d8
-    m_ActionName: 'Normal/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]'
+    m_ActionName: 'ControllerFristPerson/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1101273169}
@@ -1314,27 +1640,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 9edb7fae-0398-4dc6-b50e-229999895380
-    m_ActionName: 'Normal/Jump[/XInputControllerWindows/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3ea3cee0-7022-4a2b-8b97-d47841f1ef21
-    m_ActionName: "Normal/\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6C7A\u5B9A[/XInputControllerWindows/buttonNorth]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bbdf4b3f-e175-4ca1-890f-0431905fdc5d
-    m_ActionName: "Normal/\u6C7A\u5B9A\u53D6\u308A\u6D88\u3057[/XInputControllerWindows/buttonEast]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a05231a9-24cd-4f5a-b6f3-76533a62919e
-    m_ActionName: "Normal/\u30C0\u30C3\u30B7\u30E5[/XInputControllerWindows/leftShoulder]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0f3a7d52-b80c-4954-b1f4-2673a755bc88
-    m_ActionName: "Normal/\u4E00\u4EBA\u79F0\u8996\u70B9\u5207\u308A\u66FF\u3048[/XInputControllerWindows/rightShoulder]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d6f28575-3721-416f-89a4-bd7c93debba9
-    m_ActionName: "Normal/\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u79FB\u52D5[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]"
+    m_ActionName: 'ControllerFristPerson/Jump[/XInputControllerWindows/buttonSouth]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1101273169}
@@ -1350,58 +1656,74 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 63369967-4a01-4c8c-9019-d525b4d1cec1
-    m_ActionName: 'Normal/Run[/XInputControllerWindows/leftTrigger]'
+    m_ActionName: 'ControllerFristPerson/Run[/XInputControllerWindows/leftTrigger]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1101273169}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+    m_ActionId: 3ea3cee0-7022-4a2b-8b97-d47841f1ef21
+    m_ActionName: "ControllerFristPerson/\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6C7A\u5B9A[/XInputControllerWindows/buttonNorth]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bbdf4b3f-e175-4ca1-890f-0431905fdc5d
+    m_ActionName: "ControllerFristPerson/\u6C7A\u5B9A\u53D6\u308A\u6D88\u3057[/XInputControllerWindows/buttonEast]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a05231a9-24cd-4f5a-b6f3-76533a62919e
+    m_ActionName: "ControllerFristPerson/\u30C0\u30C3\u30B7\u30E5[/XInputControllerWindows/leftShoulder]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f3a7d52-b80c-4954-b1f4-2673a755bc88
+    m_ActionName: "ControllerFristPerson/\u4E00\u4EBA\u79F0\u8996\u70B9\u5207\u308A\u66FF\u3048[/XInputControllerWindows/rightShoulder]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d6f28575-3721-416f-89a4-bd7c93debba9
+    m_ActionName: "ControllerFristPerson/\u30AB\u30E1\u30E9\u306E\u79FB\u52D5[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]"
+  - m_PersistentCalls:
+      m_Calls: []
     m_ActionId: 353b0a9c-fd11-4456-b938-5927195b18fe
     m_ActionName: 'Keyboard/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1101273169}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: Jump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: f134bcfa-cde3-49d8-baa2-3b9ff1a1db3f
     m_ActionName: 'Keyboard/Jump[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1101273169}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: Run
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 139b35ca-8b8f-49ca-9eb6-39c7cf3f6c26
     m_ActionName: 'Keyboard/Run[/Keyboard/leftShift]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b00a6b8f-7f25-4c57-9add-d0ddf3a87e15
+    m_ActionName: 'ControllerThirdPerson/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2563381c-e605-493c-83f6-111e78777649
+    m_ActionName: 'ControllerThirdPerson/Jump[/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9eb94724-e00a-48dc-8db6-2027e5130daf
+    m_ActionName: 'ControllerThirdPerson/Run[/XInputControllerWindows/leftTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 37c9b5d2-c988-49f2-95d8-0a1f55b7ddd6
+    m_ActionName: "ControllerThirdPerson/\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6C7A\u5B9A[/XInputControllerWindows/buttonNorth]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3a3fd238-9779-4954-b139-5e5bdbfeed54
+    m_ActionName: "ControllerThirdPerson/\u6C7A\u5B9A\u53D6\u308A\u6D88\u3057[/XInputControllerWindows/buttonEast]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b0b9ad43-4942-4962-99b0-305d0e4a0524
+    m_ActionName: "ControllerThirdPerson/\u30C0\u30C3\u30B7\u30E5[/XInputControllerWindows/leftShoulder]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eb6d4813-415a-4734-9e3b-9ed70b262b9a
+    m_ActionName: "ControllerThirdPerson/\u4E00\u4EBA\u79F0\u8996\u70B9\u5207\u308A\u66FF\u3048[/XInputControllerWindows/rightShoulder]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eb873778-483a-4eb4-8c25-06ae59f74d47
+    m_ActionName: "ControllerThirdPerson/\u30AB\u30E1\u30E9\u306E\u79FB\u52D5[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]"
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Controller
+  m_DefaultActionMap: ControllerFristPerson
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &1226159663
@@ -1627,7 +1949,7 @@ Transform:
   m_GameObject: {fileID: 1450552132}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.02, y: 1.8, z: 3.72}
+  m_LocalPosition: {x: 3.02, y: -0.09, z: 3.72}
   m_LocalScale: {x: 1, y: 3.5886, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1917,9 +2239,77 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9edb7fae-0398-4dc6-b50e-229999895380
     m_ActionName: Normal/Jump
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 63369967-4a01-4c8c-9019-d525b4d1cec1
+    m_ActionName: 'ControllerFristPerson/Run[/XInputControllerWindows/leftTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3ea3cee0-7022-4a2b-8b97-d47841f1ef21
+    m_ActionName: "ControllerFristPerson/\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6C7A\u5B9A[/XInputControllerWindows/buttonNorth]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bbdf4b3f-e175-4ca1-890f-0431905fdc5d
+    m_ActionName: "ControllerFristPerson/\u6C7A\u5B9A\u53D6\u308A\u6D88\u3057[/XInputControllerWindows/buttonEast]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a05231a9-24cd-4f5a-b6f3-76533a62919e
+    m_ActionName: "ControllerFristPerson/\u30C0\u30C3\u30B7\u30E5[/XInputControllerWindows/leftShoulder]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f3a7d52-b80c-4954-b1f4-2673a755bc88
+    m_ActionName: "ControllerFristPerson/\u4E00\u4EBA\u79F0\u8996\u70B9\u5207\u308A\u66FF\u3048[/XInputControllerWindows/rightShoulder]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d6f28575-3721-416f-89a4-bd7c93debba9
+    m_ActionName: "ControllerFristPerson/\u30AB\u30E1\u30E9\u306E\u79FB\u52D5[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 353b0a9c-fd11-4456-b938-5927195b18fe
+    m_ActionName: 'Keyboard/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f134bcfa-cde3-49d8-baa2-3b9ff1a1db3f
+    m_ActionName: 'Keyboard/Jump[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 139b35ca-8b8f-49ca-9eb6-39c7cf3f6c26
+    m_ActionName: 'Keyboard/Run[/Keyboard/leftShift]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b00a6b8f-7f25-4c57-9add-d0ddf3a87e15
+    m_ActionName: 'ControllerThirdPerson/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2563381c-e605-493c-83f6-111e78777649
+    m_ActionName: 'ControllerThirdPerson/Jump[/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9eb94724-e00a-48dc-8db6-2027e5130daf
+    m_ActionName: 'ControllerThirdPerson/Run[/XInputControllerWindows/leftTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 37c9b5d2-c988-49f2-95d8-0a1f55b7ddd6
+    m_ActionName: "ControllerThirdPerson/\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6C7A\u5B9A[/XInputControllerWindows/buttonNorth]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3a3fd238-9779-4954-b139-5e5bdbfeed54
+    m_ActionName: "ControllerThirdPerson/\u6C7A\u5B9A\u53D6\u308A\u6D88\u3057[/XInputControllerWindows/buttonEast]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b0b9ad43-4942-4962-99b0-305d0e4a0524
+    m_ActionName: "ControllerThirdPerson/\u30C0\u30C3\u30B7\u30E5[/XInputControllerWindows/leftShoulder]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eb6d4813-415a-4734-9e3b-9ed70b262b9a
+    m_ActionName: "ControllerThirdPerson/\u4E00\u4EBA\u79F0\u8996\u70B9\u5207\u308A\u66FF\u3048[/XInputControllerWindows/rightShoulder]"
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eb873778-483a-4eb4-8c25-06ae59f74d47
+    m_ActionName: "ControllerThirdPerson/\u30AB\u30E1\u30E9\u306E\u79FB\u52D5[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]"
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Normal
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1666950381
@@ -1937,11 +2327,10 @@ MonoBehaviour:
   currentSpeed: 0
   speed: 3
   runSpeed: 6
-  jumpHight: 3
-  pPosition: {x: 0, y: 0, z: 0}
+  jumpHight: 5
   forwardAmount: 0
   turnAmount: 0
-  turnSpeed: 10
+  turnSpeed: 20
   pRigidbody: {fileID: 0}
   pAnimator: {fileID: 0}
   rayDepth: 0.1
@@ -1952,10 +2341,13 @@ MonoBehaviour:
   isground: 1
   isRun: 0
   localPosition: {x: 0, y: 0, z: 0}
-  playerRadius: 0.2
   stepHeight: 0.5
   stepSpeed: 5
   stepCheckDistance: 0.3
+  mainCameraTransform: {fileID: 0}
+  subCameraTransform: {fileID: 0}
+  mainCamera: {fileID: 0}
+  isFirstPerson: 0
 --- !u!54 &1666950384
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2108,7 +2500,7 @@ Transform:
   m_GameObject: {fileID: 1888666990}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.048, y: 0.568, z: 3.71}
+  m_LocalPosition: {x: 5.048, y: -0.42, z: 3.71}
   m_LocalScale: {x: 1, y: 2.911451, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2210,3 +2602,6 @@ SceneRoots:
   - {fileID: 1888666994}
   - {fileID: 966093797}
   - {fileID: 884990639}
+  - {fileID: 877643958}
+  - {fileID: 482439183}
+  - {fileID: 1023029250}
