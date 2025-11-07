@@ -4,13 +4,12 @@ using UnityEngine.InputSystem;
 public class Select3Script : MonoBehaviour
 {
     [SerializeField] Material selectedColor;
-    [SerializeField] Material nomalColor;
-    [SerializeField] int dis = 5;
-    [SerializeField] float angle = 45f;
+    [SerializeField] Material normalColor;
 
     GameObject selectedObject = null;
     Collider currentTarget = null;
     InputAction selectAction;
+    InputAction deselectAction;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +18,11 @@ public class Select3Script : MonoBehaviour
         selectAction.AddBinding("<Gamepad>/buttonNorth"); // Yボタン
         selectAction.AddBinding("<Mouse>/leftButton");    // 左クリック
         selectAction.Enable();
+
+        deselectAction = new InputAction("Select", InputActionType.Button);
+        deselectAction.AddBinding("<Gamepad>/buttonEast"); // Yボタン
+        deselectAction.AddBinding("<Mouse>/rightButton");    // 左クリック
+        deselectAction.Enable();
 
     }
 
@@ -29,20 +33,25 @@ public class Select3Script : MonoBehaviour
         {
             TrySelect();
         }
+
+        if (deselectAction != null && deselectAction.WasPressedThisFrame())
+        {
+            TryDeselect();
+        }
     }
+
     private void TrySelect()
     {
-        if (currentTarget == null || !currentTarget.CompareTag("Target")) 
+        if (currentTarget == null || !currentTarget.CompareTag("Target"))
             return;
+        Select(currentTarget.gameObject);
+    }
 
-        Vector3 dir = currentTarget.transform.position - transform.position;
-        if (Vector3.Angle(transform.forward, dir) > angle) 
+    private void TryDeselect()
+    {
+        if (currentTarget == null || !currentTarget.CompareTag("Target"))
             return;
-
-        if (Physics.Raycast(transform.position, dir.normalized, out RaycastHit hit, dis) && hit.collider == currentTarget)
-        {
-            Select(currentTarget.gameObject);
-        }
+        Deselect(currentTarget.gameObject);
     }
 
     void Select(GameObject obj)
@@ -53,16 +62,16 @@ public class Select3Script : MonoBehaviour
             Deselect(selectedObject);
         }
 
-        //新たに選択したオブジェクトのRendererいれる
+        //新たに選択したオブジェクト
         var rend = obj.GetComponent<Renderer>();
         if (rend != null && selectedObject != obj)
         {
             rend.material = selectedColor;
         }
-        else if (selectedObject != null && selectedObject == obj)
-        {
-            Deselect(selectedObject);
-        }
+        //else if (selectedObject != null && selectedObject == obj)//選択解除
+        //{
+        //    Deselect(selectedObject);
+        //}
         else
         {
             Debug.Log("Rendererが見つかりません: " + obj.name);
@@ -77,7 +86,8 @@ public class Select3Script : MonoBehaviour
         var rend = obj.GetComponent<Renderer>();
         if (rend != null)
         {
-            rend.material = nomalColor;
+            rend.material = normalColor;
+            selectedObject = null;
             Debug.Log("選択解除: " + obj.name);
         }
         else
@@ -86,14 +96,16 @@ public class Select3Script : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Target")) currentTarget = other;
+        if (other.CompareTag("Target")) 
+            currentTarget = other;
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other == currentTarget) currentTarget = null;
+        if (other == currentTarget) 
+            currentTarget = null;
     }
 
     void OnDestroy()
