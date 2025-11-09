@@ -999,6 +999,7 @@ MonoBehaviour:
   - {fileID: 287746924, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
   - {fileID: 663686632, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
   countdownTime: 180
+  delayBeforeEnd: 3
 --- !u!4 &1671202128
 Transform:
   m_ObjectHideFlags: 0
