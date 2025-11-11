@@ -1,7 +1,7 @@
 //マウスで選択スクリプト
 using UnityEngine;
 
-public class Select1Script : MonoBehaviour
+public class Select1p1Script : MonoBehaviour
 {
     GameObject selectedObject = null; // 現在選択されているオブジェクト
     [SerializeField] Material selectedColor;

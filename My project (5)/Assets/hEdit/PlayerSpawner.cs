@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerSpawner : MonoBehaviour
 {
-    // プレイヤーごとのスポーン位置
     public PlayerInput player1;
     public PlayerInput player2;
 

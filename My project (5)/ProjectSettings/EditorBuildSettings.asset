@@ -15,5 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Yuto.K.unity
     guid: 81b43fec0cd98784c8116b1d6de438c0
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings: {fileID: 11400000, guid: 027e85742d3f09a409f832fb1c6fb4c7, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 875d08f5e8f37e34f8d1e2ad76a2eaf3, type: 3}
   m_UseUCBPForAssetBundles: 0

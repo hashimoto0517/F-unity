@@ -1,15 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Select3Script : MonoBehaviour
+public class Select1p3Script : MonoBehaviour
 {
-    [SerializeField] Material selectedColor;
-    [SerializeField] Material normalColor;
-
     GameObject selectedObject = null;
     Collider currentTarget = null;
     InputAction selectAction;
     InputAction deselectAction;
+
+    //bool isSelected = false;
+
+    [SerializeField] judgeScript judgeScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,9 +20,9 @@ public class Select3Script : MonoBehaviour
         selectAction.AddBinding("<Mouse>/leftButton");    // 左クリック
         selectAction.Enable();
 
-        deselectAction = new InputAction("Select", InputActionType.Button);
+        deselectAction = new InputAction("Deselect", InputActionType.Button);
         deselectAction.AddBinding("<Gamepad>/buttonEast"); // Yボタン
-        deselectAction.AddBinding("<Mouse>/rightButton");    // 左クリック
+        deselectAction.AddBinding("<Mouse>/rightButton");    // 右クリック
         deselectAction.Enable();
 
     }
@@ -63,37 +64,18 @@ public class Select3Script : MonoBehaviour
         }
 
         //新たに選択したオブジェクト
-        var rend = obj.GetComponent<Renderer>();
-        if (rend != null && selectedObject != obj)
-        {
-            rend.material = selectedColor;
-        }
-        //else if (selectedObject != null && selectedObject == obj)//選択解除
-        //{
-        //    Deselect(selectedObject);
-        //}
-        else
-        {
-            Debug.Log("Rendererが見つかりません: " + obj.name);
-        }
-
         selectedObject = obj;
+        judgeScript.SetASelection(obj);
         Debug.Log("選択成功: " + obj.name);
+        //isSelected = true;
     }
 
     void Deselect(GameObject obj)
     {
-        var rend = obj.GetComponent<Renderer>();
-        if (rend != null)
-        {
-            rend.material = normalColor;
-            selectedObject = null;
-            Debug.Log("選択解除: " + obj.name);
-        }
-        else
-        {
-            Debug.Log("選択解除対象にRendererが見つかりません: " + obj.name);
-        }
+        selectedObject = null;
+        judgeScript.DeleteASelection();
+        Debug.Log("選択解除: " + obj.name);
+        //isSelected = false;
     }
 
     void OnTriggerEnter(Collider other)
@@ -112,6 +94,8 @@ public class Select3Script : MonoBehaviour
     {
         selectAction?.Disable();
         selectAction?.Dispose();
+        deselectAction?.Disable();
+        deselectAction?.Dispose();
     }
 }
 
