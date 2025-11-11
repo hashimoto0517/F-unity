@@ -2102,15 +2102,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b8b2e941e826ecb4cbaf8907e2d5789e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.534
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8b2e941e826ecb4cbaf8907e2d5789e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51
+      value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8b2e941e826ecb4cbaf8907e2d5789e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.363
+      value: -2.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b8b2e941e826ecb4cbaf8907e2d5789e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2146,12 +2146,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8b2e941e826ecb4cbaf8907e2d5789e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: b8b2e941e826ecb4cbaf8907e2d5789e, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: f797062351ab1b24589da13e3ed69258, type: 2}
+      objectReference: {fileID: 9000000, guid: b8b2e941e826ecb4cbaf8907e2d5789e, type: 3}
     - target: {fileID: 5866666021909216657, guid: b8b2e941e826ecb4cbaf8907e2d5789e, type: 3}
       propertyPath: m_Controller
       value: 
@@ -2309,7 +2309,7 @@ MonoBehaviour:
     m_ActionName: "ControllerThirdPerson/\u30AB\u30E1\u30E9\u306E\u79FB\u52D5[/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right]"
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: ControllerFristPerson
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1666950381
@@ -2337,16 +2337,16 @@ MonoBehaviour:
   groundCheckDistance: 0.3
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   isground: 1
   isRun: 0
   localPosition: {x: 0, y: 0, z: 0}
   stepHeight: 0.5
   stepSpeed: 5
   stepCheckDistance: 0.3
-  mainCameraTransform: {fileID: 0}
-  subCameraTransform: {fileID: 0}
-  mainCamera: {fileID: 0}
+  mainCameraTransform: {fileID: 482439183}
+  subCameraTransform: {fileID: 1023029250}
+  mainCamera: {fileID: 482439182}
   isFirstPerson: 0
 --- !u!54 &1666950384
 Rigidbody:
