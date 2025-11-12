@@ -12,9 +12,10 @@ public class StartScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ()
-        {
-            SceneManager.LoadScene("switch");
-        }
+        
+    }
+    public void ChangeScene(string Start)
+    {
+        SceneManager.LoadScene(Start);
     }
 }

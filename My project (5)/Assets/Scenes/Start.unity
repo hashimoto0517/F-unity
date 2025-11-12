@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 1381486356}
   - component: {fileID: 1381486355}
   - component: {fileID: 1381486354}
+  - component: {fileID: 1381486357}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -283,7 +284,7 @@ RectTransform:
   m_GameObject: {fileID: 1381486352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.0501, y: 6.0501, z: 6.0501}
+  m_LocalScale: {x: 2.7700987, y: 2.7700987, z: 2.7700987}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4720850}
@@ -337,7 +338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1381486355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1381486357}
+        m_TargetAssemblyTypeName: StartScript, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: switch
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1381486355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +389,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381486352}
   m_CullTransparentMesh: 1
+--- !u!114 &1381486357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381486352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710fcea1ad97dac4093520e4fecd8ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1553439970
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1381486352}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1947983902
