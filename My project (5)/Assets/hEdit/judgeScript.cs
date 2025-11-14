@@ -35,7 +35,7 @@ public class judgeScript : MonoBehaviour
 
     public void SetBSelection(GameObject obj)
     {
-            selectedB = obj;
+        selectedB = obj;
     }
     public void DeleteBSelection()
     {
@@ -49,7 +49,7 @@ public class judgeScript : MonoBehaviour
 
         if (infoA != null && infoB != null)
         {
-            if (infoA.isMistake && infoB.isMistake && infoA.category == infoB.category)
+            if (infoA.isMistake == infoB.isMistake && infoA.category == infoB.category)
             {
                 Debug.Log("ê≥ÇµÇ¢ä‘à·Ç¢ÉyÉAÅI");
             }
