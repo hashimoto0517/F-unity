@@ -70,12 +70,22 @@ public class Select2p3Script : MonoBehaviour
         //isSelected = true;
     }
 
+    public void ResetSelect()
+    {
+        selectedObject = null;
+    }
+
     void Deselect(GameObject obj)
     {
         selectedObject = null;
         judgeScript.DeleteBSelection();
         Debug.Log("‘I‘ğ‰ğœ: " + obj.name);
         //isSelected = false;
+    }
+
+    public void ChangeTag()
+    {
+        selectedObject.tag = "Untagged";
     }
 
     void OnTriggerEnter(Collider other)

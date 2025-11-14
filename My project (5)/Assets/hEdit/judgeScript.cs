@@ -7,6 +7,9 @@ public class judgeScript : MonoBehaviour
 
     private bool hasJudged = false;
 
+    [SerializeField] Select1p3Script Select1p3Script;
+    [SerializeField] Select2p3Script Select2p3Script;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,11 +54,14 @@ public class judgeScript : MonoBehaviour
         {
             if (infoA.isMistake == infoB.isMistake && infoA.category == infoB.category)
             {
-                Debug.Log("正しい間違いペア！");
+                Debug.Log("正解");
+                Select1p3Script.ChangeTag();
+                Select2p3Script.ChangeTag();
+
             }
             else
             {
-                Debug.Log("不正解！");
+                Debug.Log("不正解");
             }
         }
         else
@@ -72,6 +78,8 @@ public class judgeScript : MonoBehaviour
         selectedA = null;
         selectedB = null;
         hasJudged = false;
+        Select1p3Script.ResetSelect();
+        Select2p3Script.ResetSelect();
         Debug.Log("選択リセット");
     }
 }
