@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: af19e64d480dbb240a494bf877a5ad43
+guid: 7bf458a34c272464791472a226d14ffd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: block_color
+    second: {fileID: 2100000, guid: 506ea4c71e8e9a644aaef836e73ad58c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 1.0
+    second: {fileID: 2800000, guid: ad962bb56e46e024e91055637c639f92, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -99,7 +109,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 0
+  importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
