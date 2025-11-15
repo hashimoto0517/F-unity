@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class Select1p3Script : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Select1p3Script : MonoBehaviour
     InputAction deselectAction;
 
     //bool isSelected = false;
+    [SerializeField] TextMeshProUGUI Side1p_1pText;
+    [SerializeField] TextMeshProUGUI Side2p_1pText;
+    private InfoScript currentInfo;
 
     [SerializeField] judgeScript judgeScript;
 
@@ -68,11 +72,15 @@ public class Select1p3Script : MonoBehaviour
         judgeScript.SetASelection(obj);
         Debug.Log("選択成功: " + obj.name);
         //isSelected = true;
+        SetTarget(obj);
+        Side2p_1pText.text = "Selected";
     }
 
     public void ResetSelect()
     {
         selectedObject = null;
+        Side1p_1pText.text = "";
+        Side2p_1pText.text = "";
     }
 
     void Deselect(GameObject obj)
@@ -80,12 +88,30 @@ public class Select1p3Script : MonoBehaviour
         selectedObject = null;
         judgeScript.DeleteASelection();
         Debug.Log("選択解除: " + obj.name);
+        Side1p_1pText.text = "";
+        Side2p_1pText.text = "";
         //isSelected = false;
     }
 
     public void ChangeTag()
     {
         selectedObject.tag = "Untagged";
+    }
+
+    public void SetTarget(GameObject targetObject)
+    {
+        currentInfo = targetObject.GetComponent<InfoScript>();
+        UpdateUI();
+    }
+
+    // UI更新
+    private void UpdateUI()
+    {
+        if (currentInfo != null)
+        {
+            Side1p_1pText.text = currentInfo.category;
+        }
+        
     }
 
     void OnTriggerEnter(Collider other)

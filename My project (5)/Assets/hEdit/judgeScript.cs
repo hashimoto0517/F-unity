@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class judgeScript : MonoBehaviour
 {
@@ -9,6 +11,11 @@ public class judgeScript : MonoBehaviour
 
     [SerializeField] Select1p3Script Select1p3Script;
     [SerializeField] Select2p3Script Select2p3Script;
+
+    [SerializeField] lifeManegerScript lifeManegerScript;
+    [SerializeField] CorrectNumManegerScript correctNumManegerScript;
+    [SerializeField] TextMeshProUGUI comment1p;
+    [SerializeField] TextMeshProUGUI comment2p;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +36,7 @@ public class judgeScript : MonoBehaviour
 
     public void SetASelection(GameObject obj)
     {
-            selectedA = obj;
+        selectedA = obj;
     }
     public void DeleteASelection()
     {
@@ -55,13 +62,21 @@ public class judgeScript : MonoBehaviour
             if (infoA.isMistake == infoB.isMistake && infoA.category == infoB.category)
             {
                 Debug.Log("正解");
+                comment1p.text = "Correct";
+                comment2p.text = "Correct";
+
+                correctNumManegerScript.Correct();
+
                 Select1p3Script.ChangeTag();
                 Select2p3Script.ChangeTag();
-
             }
             else
             {
                 Debug.Log("不正解");
+                comment1p.text = "Incorrect";
+                comment2p.text = "Incorrect";
+
+                lifeManegerScript.MinusLife();
             }
         }
         else
@@ -71,6 +86,7 @@ public class judgeScript : MonoBehaviour
 
         // リセット
         Invoke(nameof(ResetSelections), 1.5f);
+
     }
 
     void ResetSelections()
@@ -80,6 +96,9 @@ public class judgeScript : MonoBehaviour
         hasJudged = false;
         Select1p3Script.ResetSelect();
         Select2p3Script.ResetSelect();
+        comment1p.text = "";
+        comment2p.text = "";
+
         Debug.Log("選択リセット");
     }
 }

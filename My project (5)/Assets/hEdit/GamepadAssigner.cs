@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Users;
 
 public class GamepadAssigner : MonoBehaviour
 {
@@ -14,13 +13,6 @@ public class GamepadAssigner : MonoBehaviour
         if (Gamepad.all.Count > gamepadIndex)
         {
             var gamepad = Gamepad.all[gamepadIndex];
-
-            // GamepadとPlayerInputをペアリング
-            InputUser user = InputUser.PerformPairingWithDevice(gamepad);
-            user.AssociateActionsWithUser(playerInput.actions); // ここでInputActionsを関連付け
-            playerInput.ActivateInput(); // 入力を有効化
-
-            // コントロールスキームを切り替え（任意）
             playerInput.SwitchCurrentControlScheme(gamepad);
         }
         else
