@@ -48,15 +48,15 @@ MonoBehaviour:
   tenImage: {fileID: 0}
   oneImage: {fileID: 0}
   numberSprites:
-  - {fileID: -503438815, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: 1285344585, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: 738510641, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: -634144754, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: 1133394252, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: 235495621, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: 1353500391, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: -540031201, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: 287746924, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
-  - {fileID: 663686632, guid: e0729b8c9d08e3a46ace23ccfd9fface, type: 3}
+  - {fileID: -1921044640, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: -2047116819, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: 970513484, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: 84632014, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: -2047009866, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: -720677677, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: 1822087820, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: 2101455849, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: 138313160, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
+  - {fileID: 1269452155, guid: 2d752fbba5dcecd4cb30fbadf3f43522, type: 3}
   countdownTime: 180
   delayBeforeEnd: 3
