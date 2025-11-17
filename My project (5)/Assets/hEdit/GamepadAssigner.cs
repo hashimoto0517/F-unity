@@ -13,7 +13,10 @@ public class GamepadAssigner : MonoBehaviour
         if (Gamepad.all.Count > gamepadIndex)
         {
             var gamepad = Gamepad.all[gamepadIndex];
-            playerInput.SwitchCurrentControlScheme(gamepad);
+            // Control Scheme –¼‚Í Input Actions ‚É‡‚í‚¹‚é
+            playerInput.SwitchCurrentControlScheme("Gamepad", gamepad);
+
+            Debug.Log($"{gameObject.name} ‚É {gamepad.displayName} ‚ğŠ„‚è“–‚Ä‚Ü‚µ‚½");
         }
         else
         {

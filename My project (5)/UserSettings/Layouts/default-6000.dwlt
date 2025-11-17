@@ -374,7 +374,7 @@ MonoBehaviour:
       height: 722.7774
     m_MinimalGUI: 1
   m_defaultScale: 0.7651042
-  m_LastWindowPixelSize: {x: 1469, y: 861}
+  m_LastWindowPixelSize: {x: 979.3334, y: 574}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 678.6667
+    y: 624
     width: 1303
     height: 294
   m_SerializedDataModeController:
@@ -448,7 +448,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 78}
     m_SelectedIDs: d8b50000
     m_LastClickedID: 46552
-    m_ExpandedIDs: 00000000d8b5000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000e4a90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -477,7 +477,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d8b50000
+    m_ExpandedIDs: 00000000e4a90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -556,8 +556,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1304
-    y: 78.66667
+    x: 1305
+    y: 24
     width: 401.66663
     height: 894
   m_SerializedDataModeController:
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 78.66667
+    y: 24
     width: 321.66666
     height: 574
   m_SerializedDataModeController:
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 623e0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 4ed2ffff66d2ffffd0d4ffffd8d4ffffb0dcffffc4dcffff8ae3ffffa2e3ffff44e6ffff54e6ffff34eeffff50eeffff14efffff18fbffff
       m_RenameOverlay:
@@ -1254,8 +1254,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 322.6667
-    y: 78.66667
+    x: 323.66666
+    y: 24
     width: 979.3334
     height: 574
   m_SerializedDataModeController:
@@ -1327,7 +1327,7 @@ MonoBehaviour:
       height: 722.7774
     m_MinimalGUI: 1
   m_defaultScale: 0.7651042
-  m_LastWindowPixelSize: {x: 1469, y: 861}
+  m_LastWindowPixelSize: {x: 979.3334, y: 574}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
