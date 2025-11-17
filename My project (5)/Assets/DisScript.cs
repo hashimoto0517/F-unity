@@ -1,15 +1,29 @@
 using UnityEngine;
-using System.Collections;
 
 public class DisScript : MonoBehaviour
 {
+    public Camera dis1p;
+    public Camera dis2p;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int maxDisplayCount = 2;
-        for (int i = 0; i < maxDisplayCount && i < Display.displays.Length; i++)
+        // 2枚目のディスプレイを有効化
+        if (Display.displays.Length > 1)
         {
-            Display.displays[i].Activate();
+            Display.displays[1].Activate();
+        }
+
+        // メインカメラ → Display 0
+        if (dis1p != null)
+        {
+            dis1p.targetDisplay = 0;
+        }
+
+        // サブカメラ → Display 1
+        if (dis2p != null)
+        {
+            dis2p.targetDisplay = 1;
         }
     }
 

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 0112441696774894c8e391b271e90d90
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Yuto.K.unity
     guid: 81b43fec0cd98784c8116b1d6de438c0
   m_configObjects:
