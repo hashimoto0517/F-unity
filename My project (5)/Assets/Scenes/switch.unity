@@ -4735,8 +4735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: 0
-  speed: 5
-  runSpeed: 10
+  speed: 10
+  runSpeed: 15
   jumpHight: 5
   forwardAmount: 0
   turnAmount: 0
@@ -5617,7 +5617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 880c58f73785d483087674ee7540ae96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.24482
+      value: 9.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 880c58f73785d483087674ee7540ae96, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14044,6 +14044,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 841577271}
     m_Modifications:
+    - target: {fileID: -5287172296573500325, guid: c234ec601d9965f42b45aea2a0189121, type: 3}
+      propertyPath: m_Size.x
+      value: 38.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -5287172296573500325, guid: c234ec601d9965f42b45aea2a0189121, type: 3}
+      propertyPath: m_Size.y
+      value: 3.59
+      objectReference: {fileID: 0}
+    - target: {fileID: -5287172296573500325, guid: c234ec601d9965f42b45aea2a0189121, type: 3}
+      propertyPath: m_Size.z
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -5287172296573500325, guid: c234ec601d9965f42b45aea2a0189121, type: 3}
+      propertyPath: m_Center.x
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: -5287172296573500325, guid: c234ec601d9965f42b45aea2a0189121, type: 3}
+      propertyPath: m_Center.y
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: -5287172296573500325, guid: c234ec601d9965f42b45aea2a0189121, type: 3}
+      propertyPath: m_Center.z
+      value: -2.29
+      objectReference: {fileID: 0}
     - target: {fileID: 449255776251882466, guid: c234ec601d9965f42b45aea2a0189121, type: 3}
       propertyPath: m_Name
       value: crayon
