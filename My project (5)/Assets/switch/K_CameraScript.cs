@@ -9,6 +9,9 @@ public class K_CameraScript : MonoBehaviour
     [SerializeField] GameObject player;          // プレイヤー格納
     [SerializeField] float distance = 5f;        // プレイヤーとの距離
     [SerializeField] float height = 2f;          // カメラ高さ
+
+    private PlayerInput playerInput;
+
     private InputAction cameraSwitchAction;      // RBボタンの入力
     private InputAction cameraRotateAction;      // 右スティックの入力
 
@@ -44,15 +47,13 @@ public class K_CameraScript : MonoBehaviour
             }
         }
 
-        // RB
-        cameraSwitchAction = new InputAction("CameraSwitch", InputActionType.Button);
-        cameraSwitchAction.AddBinding("<Gamepad>/rightShoulder");
-        cameraSwitchAction.Enable();
+        playerInput = player.GetComponent<PlayerInput>();
 
+        // RB
+        cameraSwitchAction = playerInput.actions.FindAction("CameraSwitch");
         // 右スティック
-        cameraRotateAction = new InputAction("CameraRotate", InputActionType.Value);
-        cameraRotateAction.AddBinding("<Gamepad>/rightStick");
-        cameraRotateAction.Enable();
+        cameraRotateAction = playerInput.actions.FindAction("CameraRotate");
+
 
         // 初期位置設定
         if (mainCamera.activeSelf)

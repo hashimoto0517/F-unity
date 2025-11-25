@@ -6,6 +6,7 @@ public class Select2p3Script : MonoBehaviour
 {
     GameObject selectedObject = null;
     Collider currentTarget = null;
+    private PlayerInput playerInput;
     InputAction selectAction;
     InputAction deselectAction;
 
@@ -19,16 +20,10 @@ public class Select2p3Script : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        selectAction = new InputAction("Select", InputActionType.Button);
-        selectAction.AddBinding("<Gamepad>/buttonNorth"); // Yボタン
-        selectAction.AddBinding("<Mouse>/leftButton");    // 左クリック
-        selectAction.Enable();
+        playerInput = GetComponent<PlayerInput>();
 
-        deselectAction = new InputAction("Deselect", InputActionType.Button);
-        deselectAction.AddBinding("<Gamepad>/buttonEast"); // Yボタン
-        deselectAction.AddBinding("<Mouse>/rightButton");    // 右クリック
-        deselectAction.Enable();
-
+        selectAction = playerInput.actions.FindAction("Select");
+        deselectAction = playerInput.actions.FindAction("Deselect");
     }
 
     // Update is called once per frame
@@ -70,7 +65,7 @@ public class Select2p3Script : MonoBehaviour
         //新たに選択したオブジェクト
         selectedObject = obj;
         judgeScript.SetBSelection(obj);
-        Debug.Log("選択成功: " + obj.name);
+        Debug.Log("2p選択成功: " + obj.name);
         //isSelected = true;
         SetTarget(obj);
         Side1p_2pText.text = "Selected";
