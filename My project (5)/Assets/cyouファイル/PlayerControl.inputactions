@@ -286,7 +286,7 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "353b0a9c-fd11-4456-b938-5927195b18fe",
                     "expectedControlType": "",
                     "processors": "",
