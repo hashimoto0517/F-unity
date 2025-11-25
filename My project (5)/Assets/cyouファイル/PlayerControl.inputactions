@@ -34,7 +34,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "オブジェクト決定",
+                    "name": "Select",
                     "type": "Button",
                     "id": "3ea3cee0-7022-4a2b-8b97-d47841f1ef21",
                     "expectedControlType": "",
@@ -43,7 +43,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "決定取り消し",
+                    "name": "Deselect",
                     "type": "Button",
                     "id": "bbdf4b3f-e175-4ca1-890f-0431905fdc5d",
                     "expectedControlType": "",
@@ -61,7 +61,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "一人称視点切り替え",
+                    "name": "CameraSwitch",
                     "type": "Button",
                     "id": "0f3a7d52-b80c-4954-b1f4-2673a755bc88",
                     "expectedControlType": "",
@@ -70,7 +70,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "カメラの移動",
+                    "name": "CameraRotate",
                     "type": "Value",
                     "id": "d6f28575-3721-416f-89a4-bd7c93debba9",
                     "expectedControlType": "",
@@ -153,7 +153,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "オブジェクト決定",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1133bd9f-6e2d-4f94-9807-86c1451e6496",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -164,7 +175,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "決定取り消し",
+                    "action": "Deselect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0163e915-f9f2-4c53-a6dd-239185ede001",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Deselect",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -186,7 +208,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "一人称視点切り替え",
+                    "action": "CameraSwitch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -197,7 +219,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "カメラの移動",
+                    "action": "CameraRotate",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -208,7 +230,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "カメラの移動",
+                    "action": "CameraRotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -219,7 +241,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "カメラの移動",
+                    "action": "CameraRotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -230,7 +252,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "カメラの移動",
+                    "action": "CameraRotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -241,7 +263,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "カメラの移動",
+                    "action": "CameraRotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
