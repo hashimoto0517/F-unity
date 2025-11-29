@@ -8,9 +8,9 @@ public class PlayerControl : MonoBehaviour
 
 
     public float currentSpeed;
-    public float speed = 3f;
-    public float runSpeed = 5f;
-    public float jumpHight = 5;
+    public float speed = 10f;
+    public float runSpeed = 15f;
+    public float jumpHight = 25;
     public float forwardAmount;
 
 
@@ -43,6 +43,9 @@ public class PlayerControl : MonoBehaviour
     public GameObject mainCamera;
     public bool isFirstPerson = false;
 
+    public float customFallSpeed = 10;
+    public float maxFallSpeed = 20;
+
 
 
 
@@ -58,10 +61,11 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         RayCheckGround();
+        Fall();
     }
     void FixedUpdate()
     {
-        StepClimbCheck();
+        //StepClimbCheck();
 
         //一人称視点かどうかチェックすること
         if (mainCamera.activeSelf)
@@ -141,20 +145,20 @@ public class PlayerControl : MonoBehaviour
     }
 
     //段差に上る
-    void StepClimbCheck()
-    {
-        Vector3 rayUp = transform.position + Vector3.up * 0.1f;
-        Vector3 rayDown = transform.position + Vector3.up * stepHeight;
-        if (Physics.Raycast(rayUp, transform.forward, out RaycastHit hitlow, stepCheckDistance))
-        {
-            if (!Physics.Raycast(rayDown, transform.forward, out RaycastHit hitHigh, stepCheckDistance))
-            {
-                pRigidbody.position += new Vector3(0, stepSpeed * Time.fixedDeltaTime, 0);
-            }
-        }
-        Debug.DrawRay(rayUp, transform.forward * stepCheckDistance, Color.yellow);
-        Debug.DrawRay(rayDown, transform.forward * stepCheckDistance, Color.green);
-    }
+    // void StepClimbCheck()
+    // {
+    //     Vector3 rayUp = transform.position + Vector3.up * 0.1f;
+    //     Vector3 rayDown = transform.position + Vector3.up * stepHeight;
+    //     if (Physics.Raycast(rayUp, transform.forward, out RaycastHit hitlow, stepCheckDistance))
+    //     {
+    //         if (!Physics.Raycast(rayDown, transform.forward, out RaycastHit hitHigh, stepCheckDistance))
+    //         {
+    //             pRigidbody.position += new Vector3(0, stepSpeed * Time.fixedDeltaTime, 0);
+    //         }
+    //     }
+    //     Debug.DrawRay(rayUp, transform.forward * stepCheckDistance, Color.yellow);
+    //     Debug.DrawRay(rayDown, transform.forward * stepCheckDistance, Color.green);
+    // }
 
     public void FirstPerson()
     {
@@ -284,6 +288,28 @@ public class PlayerControl : MonoBehaviour
         }
         UpdateAnimation();
 
+    }
+
+    void Fall()
+    {
+        Vector3 velocity = pRigidbody.linearVelocity;
+
+        if (!isground)
+        {
+            velocity.y -= customFallSpeed * Time.fixedDeltaTime;
+            if (velocity.y < -maxFallSpeed)
+            {
+                velocity.y = -maxFallSpeed;
+            }
+        }
+        else
+        {
+            if (velocity.y < 0)
+            {
+                velocity.y = -0.5f;
+            }
+        }
+        pRigidbody.linearVelocity = velocity;
     }
 
 

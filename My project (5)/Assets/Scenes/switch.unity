@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 42988547}
   - component: {fileID: 42988546}
   - component: {fileID: 42988549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 52218208}
   - component: {fileID: 52218207}
   - component: {fileID: 52218210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 73875774}
   - component: {fileID: 73875773}
   - component: {fileID: 73875772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 86378868}
   - component: {fileID: 86378867}
   - component: {fileID: 86378870}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 99726607}
   - component: {fileID: 99726606}
   - component: {fileID: 99726609}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 189613546}
   - component: {fileID: 189613545}
   - component: {fileID: 189613548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,7 +1278,7 @@ GameObject:
   - component: {fileID: 193831339}
   - component: {fileID: 193831338}
   - component: {fileID: 193831341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 224698498}
   - component: {fileID: 224698497}
   - component: {fileID: 224698496}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1592,7 +1592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 255710713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: utikabe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1827,7 +1827,7 @@ GameObject:
   - component: {fileID: 270918458}
   - component: {fileID: 270918457}
   - component: {fileID: 270918460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2083,7 +2083,7 @@ GameObject:
   - component: {fileID: 306567251}
   - component: {fileID: 306567250}
   - component: {fileID: 306567249}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2219,7 +2219,7 @@ GameObject:
   - component: {fileID: 326180126}
   - component: {fileID: 326180125}
   - component: {fileID: 326180124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2640,7 +2640,7 @@ GameObject:
   - component: {fileID: 343384576}
   - component: {fileID: 343384575}
   - component: {fileID: 343384574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2776,7 +2776,7 @@ GameObject:
   - component: {fileID: 357443578}
   - component: {fileID: 357443577}
   - component: {fileID: 357443576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3031,6 +3031,7 @@ GameObject:
   - component: {fileID: 451788344}
   - component: {fileID: 451788347}
   - component: {fileID: 451788345}
+  - component: {fileID: 451788348}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3148,6 +3149,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!81 &451788348
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451788343}
+  m_Enabled: 1
 --- !u!1 &471242884
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,7 +3306,7 @@ GameObject:
   - component: {fileID: 476325590}
   - component: {fileID: 476325589}
   - component: {fileID: 476325592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3433,7 +3442,7 @@ GameObject:
   - component: {fileID: 485617387}
   - component: {fileID: 485617386}
   - component: {fileID: 485617385}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3587,6 +3596,7 @@ GameObject:
   - component: {fileID: 559867449}
   - component: {fileID: 559867451}
   - component: {fileID: 559867450}
+  - component: {fileID: 559867452}
   m_Layer: 0
   m_Name: SubCamera
   m_TagString: Untagged
@@ -3704,6 +3714,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!81 &559867452
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559867448}
+  m_Enabled: 1
 --- !u!1 &572247152
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,7 +4083,7 @@ GameObject:
   - component: {fileID: 627783249}
   - component: {fileID: 627783248}
   - component: {fileID: 627783251}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4201,7 +4219,7 @@ GameObject:
   - component: {fileID: 644004088}
   - component: {fileID: 644004087}
   - component: {fileID: 644004090}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4337,7 +4355,7 @@ GameObject:
   - component: {fileID: 644050324}
   - component: {fileID: 644050323}
   - component: {fileID: 644050322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4685,41 +4703,9 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 139b35ca-8b8f-49ca-9eb6-39c7cf3f6c26
     m_ActionName: 'Keyboard/Run[/Keyboard/leftShift]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b00a6b8f-7f25-4c57-9add-d0ddf3a87e15
-    m_ActionName: 'ControllerThirdPerson/Move[/XboxOneGampadMacOSWireless/leftStick/up,/XboxOneGampadMacOSWireless/leftStick/down,/XboxOneGampadMacOSWireless/leftStick/left,/XboxOneGampadMacOSWireless/leftStick/right]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2563381c-e605-493c-83f6-111e78777649
-    m_ActionName: 'ControllerThirdPerson/Jump[/XboxOneGampadMacOSWireless/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9eb94724-e00a-48dc-8db6-2027e5130daf
-    m_ActionName: 'ControllerThirdPerson/Run[/XboxOneGampadMacOSWireless/leftTrigger]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 37c9b5d2-c988-49f2-95d8-0a1f55b7ddd6
-    m_ActionName: "ControllerThirdPerson/\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6C7A\u5B9A[/XboxOneGampadMacOSWireless/buttonNorth]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3a3fd238-9779-4954-b139-5e5bdbfeed54
-    m_ActionName: "ControllerThirdPerson/\u6C7A\u5B9A\u53D6\u308A\u6D88\u3057[/XboxOneGampadMacOSWireless/buttonEast]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b0b9ad43-4942-4962-99b0-305d0e4a0524
-    m_ActionName: "ControllerThirdPerson/\u30C0\u30C3\u30B7\u30E5[/XboxOneGampadMacOSWireless/leftShoulder]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb6d4813-415a-4734-9e3b-9ed70b262b9a
-    m_ActionName: "ControllerThirdPerson/\u4E00\u4EBA\u79F0\u8996\u70B9\u5207\u308A\u66FF\u3048[/XboxOneGampadMacOSWireless/rightShoulder]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb873778-483a-4eb4-8c25-06ae59f74d47
-    m_ActionName: "ControllerThirdPerson/\u30AB\u30E1\u30E9\u306E\u79FB\u52D5[/XboxOneGampadMacOSWireless/rightStick/up,/XboxOneGampadMacOSWireless/rightStick/down,/XboxOneGampadMacOSWireless/rightStick/left,/XboxOneGampadMacOSWireless/rightStick/right]"
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: ControllerFristPerson
+  m_DefaultActionMap: Controller
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &684936379
@@ -4737,7 +4723,7 @@ MonoBehaviour:
   currentSpeed: 0
   speed: 10
   runSpeed: 15
-  jumpHight: 5
+  jumpHight: 25
   forwardAmount: 0
   turnAmount: 0
   turnSpeed: 20
@@ -4758,6 +4744,8 @@ MonoBehaviour:
   subCameraTransform: {fileID: 559867449}
   mainCamera: {fileID: 332825631}
   isFirstPerson: 0
+  customFallSpeed: 20
+  maxFallSpeed: 30
 --- !u!136 &684936380
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4803,7 +4791,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -4852,6 +4840,7 @@ GameObject:
   - component: {fileID: 688684215}
   - component: {fileID: 688684217}
   - component: {fileID: 688684216}
+  - component: {fileID: 688684218}
   m_Layer: 0
   m_Name: SubCamera
   m_TagString: Untagged
@@ -4969,6 +4958,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!81 &688684218
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688684214}
+  m_Enabled: 1
 --- !u!1001 &738001207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5369,7 +5366,7 @@ GameObject:
   - component: {fileID: 828346814}
   - component: {fileID: 828346813}
   - component: {fileID: 828346812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5712,7 +5709,7 @@ GameObject:
   - component: {fileID: 912724058}
   - component: {fileID: 912724057}
   - component: {fileID: 912724060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5848,7 +5845,7 @@ GameObject:
   - component: {fileID: 920277071}
   - component: {fileID: 920277070}
   - component: {fileID: 920277073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6177,7 +6174,7 @@ GameObject:
   - component: {fileID: 970979721}
   - component: {fileID: 970979720}
   - component: {fileID: 970979723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6300,6 +6297,135 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &976486162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 976486164}
+  - component: {fileID: 976486163}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &976486163
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976486162}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3a147e6e36236fc4ebab963c990c373a, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3a147e6e36236fc4ebab963c990c373a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &976486164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976486162}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.1574, y: 0, z: 15845.125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &988100847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6313,7 +6439,7 @@ GameObject:
   - component: {fileID: 988100850}
   - component: {fileID: 988100849}
   - component: {fileID: 988100852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6666,7 +6792,7 @@ GameObject:
   - component: {fileID: 1011670373}
   - component: {fileID: 1011670372}
   - component: {fileID: 1011670371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6802,7 +6928,7 @@ GameObject:
   - component: {fileID: 1018120513}
   - component: {fileID: 1018120512}
   - component: {fileID: 1018120511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6938,7 +7064,7 @@ GameObject:
   - component: {fileID: 1023476341}
   - component: {fileID: 1023476340}
   - component: {fileID: 1023476339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7085,7 +7211,7 @@ GameObject:
   - component: {fileID: 1142466851}
   - component: {fileID: 1142466850}
   - component: {fileID: 1142466853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7371,7 +7497,7 @@ GameObject:
   - component: {fileID: 1196318005}
   - component: {fileID: 1196318004}
   - component: {fileID: 1196318003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7503,7 +7629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1198649858}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightStairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7598,7 +7724,7 @@ GameObject:
   - component: {fileID: 1262806610}
   - component: {fileID: 1262806609}
   - component: {fileID: 1262806608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7745,7 +7871,7 @@ GameObject:
   - component: {fileID: 1313694636}
   - component: {fileID: 1313694635}
   - component: {fileID: 1313694634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8009,7 +8135,7 @@ GameObject:
   - component: {fileID: 1318151517}
   - component: {fileID: 1318151516}
   - component: {fileID: 1318151519}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8145,7 +8271,7 @@ GameObject:
   - component: {fileID: 1369175309}
   - component: {fileID: 1369175308}
   - component: {fileID: 1369175307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8395,7 +8521,7 @@ GameObject:
   - component: {fileID: 1405071233}
   - component: {fileID: 1405071232}
   - component: {fileID: 1405071231}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8531,7 +8657,7 @@ GameObject:
   - component: {fileID: 1431256538}
   - component: {fileID: 1431256537}
   - component: {fileID: 1431256536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8667,7 +8793,7 @@ GameObject:
   - component: {fileID: 1431642934}
   - component: {fileID: 1431642933}
   - component: {fileID: 1431642932}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8957,7 +9083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1490136856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightStairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9047,7 +9173,7 @@ GameObject:
   - component: {fileID: 1513221907}
   - component: {fileID: 1513221906}
   - component: {fileID: 1513221909}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9183,7 +9309,7 @@ GameObject:
   - component: {fileID: 1541973808}
   - component: {fileID: 1541973807}
   - component: {fileID: 1541973806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9593,6 +9719,8 @@ MonoBehaviour:
   subCameraTransform: {fileID: 2060207166}
   mainCamera: {fileID: 1651712344}
   isFirstPerson: 0
+  customFallSpeed: 0
+  maxFallSpeed: 0
 --- !u!136 &1550456080
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9656,7 +9784,7 @@ GameObject:
   - component: {fileID: 1552109309}
   - component: {fileID: 1552109308}
   - component: {fileID: 1552109311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9842,7 +9970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1578785515}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftStairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10026,7 +10154,7 @@ GameObject:
   - component: {fileID: 1626515419}
   - component: {fileID: 1626515418}
   - component: {fileID: 1626515417}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10299,7 +10427,7 @@ GameObject:
   - component: {fileID: 1678372917}
   - component: {fileID: 1678372916}
   - component: {fileID: 1678372919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10431,7 +10559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1706574843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: utikabe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10878,7 +11006,7 @@ GameObject:
   - component: {fileID: 1849608104}
   - component: {fileID: 1849608103}
   - component: {fileID: 1849608106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11150,7 +11278,7 @@ GameObject:
   - component: {fileID: 1885875446}
   - component: {fileID: 1885875445}
   - component: {fileID: 1885875448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11487,41 +11615,9 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 139b35ca-8b8f-49ca-9eb6-39c7cf3f6c26
     m_ActionName: 'Keyboard/Run[/Keyboard/leftShift]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b00a6b8f-7f25-4c57-9add-d0ddf3a87e15
-    m_ActionName: 'ControllerThirdPerson/Move[/XboxOneGampadMacOSWireless/leftStick/up,/XboxOneGampadMacOSWireless/leftStick/down,/XboxOneGampadMacOSWireless/leftStick/left,/XboxOneGampadMacOSWireless/leftStick/right]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2563381c-e605-493c-83f6-111e78777649
-    m_ActionName: 'ControllerThirdPerson/Jump[/XboxOneGampadMacOSWireless/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9eb94724-e00a-48dc-8db6-2027e5130daf
-    m_ActionName: 'ControllerThirdPerson/Run[/XboxOneGampadMacOSWireless/leftTrigger]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 37c9b5d2-c988-49f2-95d8-0a1f55b7ddd6
-    m_ActionName: "ControllerThirdPerson/\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6C7A\u5B9A[/XboxOneGampadMacOSWireless/buttonNorth]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3a3fd238-9779-4954-b139-5e5bdbfeed54
-    m_ActionName: "ControllerThirdPerson/\u6C7A\u5B9A\u53D6\u308A\u6D88\u3057[/XboxOneGampadMacOSWireless/buttonEast]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b0b9ad43-4942-4962-99b0-305d0e4a0524
-    m_ActionName: "ControllerThirdPerson/\u30C0\u30C3\u30B7\u30E5[/XboxOneGampadMacOSWireless/leftShoulder]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb6d4813-415a-4734-9e3b-9ed70b262b9a
-    m_ActionName: "ControllerThirdPerson/\u4E00\u4EBA\u79F0\u8996\u70B9\u5207\u308A\u66FF\u3048[/XboxOneGampadMacOSWireless/rightShoulder]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb873778-483a-4eb4-8c25-06ae59f74d47
-    m_ActionName: "ControllerThirdPerson/\u30AB\u30E1\u30E9\u306E\u79FB\u52D5[/XboxOneGampadMacOSWireless/rightStick/up,/XboxOneGampadMacOSWireless/rightStick/down,/XboxOneGampadMacOSWireless/rightStick/left,/XboxOneGampadMacOSWireless/rightStick/right]"
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: ControllerFristPerson
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1893173344
@@ -11560,6 +11656,8 @@ MonoBehaviour:
   subCameraTransform: {fileID: 1315332794}
   mainCamera: {fileID: 330585543}
   isFirstPerson: 0
+  customFallSpeed: 0
+  maxFallSpeed: 0
 --- !u!136 &1893173345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11680,7 +11778,7 @@ GameObject:
   - component: {fileID: 1899547258}
   - component: {fileID: 1899547257}
   - component: {fileID: 1899547260}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11816,7 +11914,7 @@ GameObject:
   - component: {fileID: 1905400839}
   - component: {fileID: 1905400838}
   - component: {fileID: 1905400841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12088,7 +12186,7 @@ GameObject:
   - component: {fileID: 1937674472}
   - component: {fileID: 1937674471}
   - component: {fileID: 1937674474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12224,7 +12322,7 @@ GameObject:
   - component: {fileID: 1946130464}
   - component: {fileID: 1946130463}
   - component: {fileID: 1946130462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12485,7 +12583,7 @@ GameObject:
   - component: {fileID: 1984611973}
   - component: {fileID: 1984611972}
   - component: {fileID: 1984611971}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12758,7 +12856,7 @@ GameObject:
   - component: {fileID: 2046463792}
   - component: {fileID: 2046463791}
   - component: {fileID: 2046463790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13022,7 +13120,7 @@ GameObject:
   - component: {fileID: 2082343916}
   - component: {fileID: 2082343915}
   - component: {fileID: 2082343914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13213,7 +13311,7 @@ GameObject:
   - component: {fileID: 2119048547}
   - component: {fileID: 2119048546}
   - component: {fileID: 2119048549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13350,7 +13448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2134023361}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftStairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13613,41 +13711,9 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 139b35ca-8b8f-49ca-9eb6-39c7cf3f6c26
     m_ActionName: 'Keyboard/Run[/Keyboard/leftShift]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b00a6b8f-7f25-4c57-9add-d0ddf3a87e15
-    m_ActionName: 'ControllerThirdPerson/Move[/XboxOneGampadMacOSWireless/leftStick/up,/XboxOneGampadMacOSWireless/leftStick/down,/XboxOneGampadMacOSWireless/leftStick/left,/XboxOneGampadMacOSWireless/leftStick/right]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2563381c-e605-493c-83f6-111e78777649
-    m_ActionName: 'ControllerThirdPerson/Jump[/XboxOneGampadMacOSWireless/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9eb94724-e00a-48dc-8db6-2027e5130daf
-    m_ActionName: 'ControllerThirdPerson/Run[/XboxOneGampadMacOSWireless/leftTrigger]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 37c9b5d2-c988-49f2-95d8-0a1f55b7ddd6
-    m_ActionName: "ControllerThirdPerson/\u30AA\u30D6\u30B8\u30A7\u30AF\u30C8\u6C7A\u5B9A[/XboxOneGampadMacOSWireless/buttonNorth]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3a3fd238-9779-4954-b139-5e5bdbfeed54
-    m_ActionName: "ControllerThirdPerson/\u6C7A\u5B9A\u53D6\u308A\u6D88\u3057[/XboxOneGampadMacOSWireless/buttonEast]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b0b9ad43-4942-4962-99b0-305d0e4a0524
-    m_ActionName: "ControllerThirdPerson/\u30C0\u30C3\u30B7\u30E5[/XboxOneGampadMacOSWireless/leftShoulder]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb6d4813-415a-4734-9e3b-9ed70b262b9a
-    m_ActionName: "ControllerThirdPerson/\u4E00\u4EBA\u79F0\u8996\u70B9\u5207\u308A\u66FF\u3048[/XboxOneGampadMacOSWireless/rightShoulder]"
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: eb873778-483a-4eb4-8c25-06ae59f74d47
-    m_ActionName: "ControllerThirdPerson/\u30AB\u30E1\u30E9\u306E\u79FB\u52D5[/XboxOneGampadMacOSWireless/rightStick/up,/XboxOneGampadMacOSWireless/rightStick/down,/XboxOneGampadMacOSWireless/rightStick/left,/XboxOneGampadMacOSWireless/rightStick/right]"
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: ControllerFristPerson
+  m_DefaultActionMap: Controller
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &2137580990
@@ -13663,9 +13729,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSpeed: 0
-  speed: 5
-  runSpeed: 10
-  jumpHight: 10
+  speed: 10
+  runSpeed: 15
+  jumpHight: 25
   forwardAmount: 0
   turnAmount: 0
   turnSpeed: 20
@@ -13686,6 +13752,8 @@ MonoBehaviour:
   subCameraTransform: {fileID: 688684215}
   mainCamera: {fileID: 451788343}
   isFirstPerson: 0
+  customFallSpeed: 10
+  maxFallSpeed: 20
 --- !u!136 &2137580991
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13731,7 +13799,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -14130,3 +14198,4 @@ SceneRoots:
   - {fileID: 1812516389}
   - {fileID: 988351347}
   - {fileID: 1493074656}
+  - {fileID: 976486164}
