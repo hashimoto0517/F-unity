@@ -4008,6 +4008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: train
       objectReference: {fileID: 0}
+    - target: {fileID: 4166274037382324731, guid: 65d0c5e107bca9f40be4f50df6c416c1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4723,6 +4727,7 @@ MonoBehaviour:
   currentSpeed: 0
   speed: 10
   runSpeed: 15
+  currentJumpHeight: 25
   jumpHight: 25
   forwardAmount: 0
   turnAmount: 0
@@ -4744,8 +4749,13 @@ MonoBehaviour:
   subCameraTransform: {fileID: 559867449}
   mainCamera: {fileID: 332825631}
   isFirstPerson: 0
-  customFallSpeed: 20
-  maxFallSpeed: 30
+  customFallSpeed: 50
+  maxFallSpeed: 100
+  isFrontObstacle: 0
+  obstacleExtraJump: 70
+  obstacleExtraRunJump: 85
+  frontCheckDistance: 1.6
+  rayHight: 0.2
 --- !u!136 &684936380
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9698,6 +9708,7 @@ MonoBehaviour:
   currentSpeed: 0
   speed: 5
   runSpeed: 10
+  currentJumpHeight: 25
   jumpHight: 5
   forwardAmount: 0
   turnAmount: 0
@@ -9719,8 +9730,13 @@ MonoBehaviour:
   subCameraTransform: {fileID: 2060207166}
   mainCamera: {fileID: 1651712344}
   isFirstPerson: 0
-  customFallSpeed: 0
-  maxFallSpeed: 0
+  customFallSpeed: 10
+  maxFallSpeed: 20
+  isFrontObstacle: 0
+  obstacleExtraJump: 70
+  obstacleExtraRunJump: 100
+  frontCheckDistance: 0.6
+  rayHight: 0.2
 --- !u!136 &1550456080
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11635,6 +11651,7 @@ MonoBehaviour:
   currentSpeed: 0
   speed: 5
   runSpeed: 10
+  currentJumpHeight: 25
   jumpHight: 5
   forwardAmount: 0
   turnAmount: 0
@@ -11656,8 +11673,13 @@ MonoBehaviour:
   subCameraTransform: {fileID: 1315332794}
   mainCamera: {fileID: 330585543}
   isFirstPerson: 0
-  customFallSpeed: 0
-  maxFallSpeed: 0
+  customFallSpeed: 10
+  maxFallSpeed: 20
+  isFrontObstacle: 0
+  obstacleExtraJump: 70
+  obstacleExtraRunJump: 100
+  frontCheckDistance: 0.6
+  rayHight: 0.2
 --- !u!136 &1893173345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13731,6 +13753,7 @@ MonoBehaviour:
   currentSpeed: 0
   speed: 10
   runSpeed: 15
+  currentJumpHeight: 25
   jumpHight: 25
   forwardAmount: 0
   turnAmount: 0
@@ -13752,8 +13775,13 @@ MonoBehaviour:
   subCameraTransform: {fileID: 688684215}
   mainCamera: {fileID: 451788343}
   isFirstPerson: 0
-  customFallSpeed: 10
-  maxFallSpeed: 20
+  customFallSpeed: 50
+  maxFallSpeed: 100
+  isFrontObstacle: 0
+  obstacleExtraJump: 70
+  obstacleExtraRunJump: 100
+  frontCheckDistance: 0.6
+  rayHight: 0.2
 --- !u!136 &2137580991
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     public float currentSpeed;
     public float speed = 10f;
     public float runSpeed = 15f;
+    public float currentJumpHeight = 25;
     public float jumpHight = 25;
     public float forwardAmount;
 
@@ -43,9 +44,18 @@ public class PlayerControl : MonoBehaviour
     public GameObject mainCamera;
     public bool isFirstPerson = false;
 
-    public float customFallSpeed = 10;
-    public float maxFallSpeed = 20;
+    public float customFallSpeed = 50;
+    public float maxFallSpeed = 100;
 
+
+
+    public bool isFrontObstacle = false;
+    public float obstacleExtraJump = 70;
+    public float obstacleExtraRunJump = 100;
+
+    public float frontCheckDistance = 0.6f;
+    public float rayHight = 0.2f;
+    //CapsuleCollider capsule;
 
 
 
@@ -55,17 +65,21 @@ public class PlayerControl : MonoBehaviour
     {
         pRigidbody = GetComponent<Rigidbody>();
         pAnimator = GetComponent<Animator>();
+        //capsule = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
         RayCheckGround();
-        Fall();
+
     }
     void FixedUpdate()
     {
         //StepClimbCheck();
+        Fall();
+        //CheckFrontObstacle_Capsule();
+        CheckFrontObstacle();
 
         //一人称視点かどうかチェックすること
         if (mainCamera.activeSelf)
@@ -107,11 +121,28 @@ public class PlayerControl : MonoBehaviour
     }
     public void Jump(InputAction.CallbackContext button)
     {
-        if (isground && button.started)
+        if (!isground || !button.started)
         {
-            pAnimator.SetTrigger("JumpTrigger");
-            pRigidbody.AddForce(Vector3.up * jumpHight, ForceMode.Impulse);
+            return;
         }
+
+        bool isMoving = forwardAmount > 0;
+
+        if (isRun && isFrontObstacle)
+        {
+            currentJumpHeight = obstacleExtraRunJump;
+        }
+        else if (isFrontObstacle && isMoving)
+        {
+            currentJumpHeight = obstacleExtraJump;
+        }
+        else
+        {
+            currentJumpHeight = jumpHight;
+        }
+        pAnimator.SetTrigger("JumpTrigger");
+        pRigidbody.AddForce(Vector3.up * currentJumpHeight, ForceMode.Impulse);
+        Debug.Log("Jump height = " + currentJumpHeight);
     }
     public void Run(InputAction.CallbackContext button)
     {
@@ -198,6 +229,15 @@ public class PlayerControl : MonoBehaviour
         Vector3 desiredMove = moveDir * currentSpeed;
         desiredMove.y = yAmount;
 
+        if (!isground)
+        {
+            pRigidbody.linearVelocity = new Vector3(desiredMove.x, yAmount, desiredMove.z);
+        }
+        else
+        {
+            pRigidbody.linearVelocity = desiredMove;
+        }
+
 
         pRigidbody.linearVelocity = desiredMove;
 
@@ -262,6 +302,15 @@ public class PlayerControl : MonoBehaviour
         Vector3 desiredMove = moveDir * currentSpeed;
         desiredMove.y = yAmount;
 
+        if (!isground)
+        {
+            pRigidbody.linearVelocity = new Vector3(desiredMove.x, yAmount, desiredMove.z);
+        }
+        else
+        {
+            pRigidbody.linearVelocity = desiredMove;
+        }
+
 
         pRigidbody.linearVelocity = desiredMove;
 
@@ -297,6 +346,7 @@ public class PlayerControl : MonoBehaviour
         if (!isground)
         {
             velocity.y -= customFallSpeed * Time.fixedDeltaTime;
+
             if (velocity.y < -maxFallSpeed)
             {
                 velocity.y = -maxFallSpeed;
@@ -311,6 +361,44 @@ public class PlayerControl : MonoBehaviour
         }
         pRigidbody.linearVelocity = velocity;
     }
+    void CheckFrontObstacle()
+    {
+        Vector3 current = transform.position + Vector3.up * rayHight;
+        Ray ray = new Ray(current, transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, frontCheckDistance, groundLayer))
+        {
+            isFrontObstacle = true;
+        }
+        else
+        {
+            isFrontObstacle = false;
+        }
+        Debug.DrawRay(current, transform.forward * frontCheckDistance, isFrontObstacle ? Color.red : Color.green);
+    }
+
+    // void CheckFrontObstacle_Capsule()
+    // {
+    //     if (!capsule)
+    //     {
+    //         return;
+    //     }
+    //     float height = Mathf.Max(capsule.height, capsule.radius * 2);
+    //     Vector3 center = transform.TransformPoint(capsule.center);
+
+    //     Vector3 position1 = center + Vector3.up * (height / 2 - capsule.radius);
+    //     Vector3 position2 = center + Vector3.down * (height / 2 - capsule.radius);
+    //     if (Physics.CapsuleCast(position1, position2, capsule.radius * 0.95f, transform.forward, out RaycastHit hit, frontCheckDistance))
+    //     {
+    //         isFrontObstacle = true;
+    //     }
+    //     else
+    //     {
+    //         isFrontObstacle = false;
+    //     }
+    //     Debug.DrawLine(position1, position2 + transform.forward * frontCheckDistance, Color.yellow);
+
+
+    // }
 
 
 
