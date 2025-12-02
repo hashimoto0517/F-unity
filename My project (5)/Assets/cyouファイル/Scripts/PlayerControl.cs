@@ -361,6 +361,7 @@ public class PlayerControl : MonoBehaviour
         }
         pRigidbody.linearVelocity = velocity;
     }
+    
     void CheckFrontObstacle()
     {
         Vector3 current = transform.position + Vector3.up * rayHight;
