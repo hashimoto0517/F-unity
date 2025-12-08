@@ -4,23 +4,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
-    Vector3 moveAmount;
-
 
     public float currentSpeed;
     public float speed = 10f;
     public float runSpeed = 15f;
-    public float currentJumpHeight = 25;
     public float jumpHight = 25;
     public float forwardAmount;
+    public Vector3 moveAmount;
 
 
 
 
     public float turnAmount;
     public float turnSpeed = 20f;
-    public Rigidbody pRigidbody;
-    public Animator pAnimator;
+    private Rigidbody pRigidbody;
+    private Animator pAnimator;
 
 
 
@@ -44,17 +42,17 @@ public class PlayerControl : MonoBehaviour
     public GameObject mainCamera;
     public bool isFirstPerson = false;
 
-    public float customFallSpeed = 50;
+    public float customFallSpeed = 65;
     public float maxFallSpeed = 100;
 
 
 
-    public bool isFrontObstacle = false;
-    public float obstacleExtraJump = 70;
-    public float obstacleExtraRunJump = 100;
+    // public bool isFrontObstacle = false;
+    // public float obstacleExtraJump = 70;
+    // public float obstacleExtraRunJump = 100;
 
-    public float frontCheckDistance = 0.6f;
-    public float rayHight = 0.2f;
+    // public float frontCheckDistance = 0.6f;
+    // public float rayHight = 0.2f;
     //CapsuleCollider capsule;
 
 
@@ -76,10 +74,10 @@ public class PlayerControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //StepClimbCheck();
+        StepClimbCheck();
         Fall();
         //CheckFrontObstacle_Capsule();
-        CheckFrontObstacle();
+        //CheckFrontObstacle();
 
         //一人称視点かどうかチェックすること
         if (mainCamera.activeSelf)
@@ -125,24 +123,8 @@ public class PlayerControl : MonoBehaviour
         {
             return;
         }
-
-        bool isMoving = forwardAmount > 0;
-
-        if (isRun && isFrontObstacle)
-        {
-            currentJumpHeight = obstacleExtraRunJump;
-        }
-        else if (isFrontObstacle && isMoving)
-        {
-            currentJumpHeight = obstacleExtraJump;
-        }
-        else
-        {
-            currentJumpHeight = jumpHight;
-        }
         pAnimator.SetTrigger("JumpTrigger");
-        pRigidbody.AddForce(Vector3.up * currentJumpHeight, ForceMode.Impulse);
-        Debug.Log("Jump height = " + currentJumpHeight);
+        pRigidbody.AddForce(Vector3.up * jumpHight, ForceMode.Impulse);
     }
     public void Run(InputAction.CallbackContext button)
     {
@@ -172,24 +154,23 @@ public class PlayerControl : MonoBehaviour
             isground = false;
         }
         Debug.DrawRay(a, Vector3.down * groundCheckDistance, isground ? Color.green : Color.red);
-
     }
 
     //段差に上る
-    // void StepClimbCheck()
-    // {
-    //     Vector3 rayUp = transform.position + Vector3.up * 0.1f;
-    //     Vector3 rayDown = transform.position + Vector3.up * stepHeight;
-    //     if (Physics.Raycast(rayUp, transform.forward, out RaycastHit hitlow, stepCheckDistance))
-    //     {
-    //         if (!Physics.Raycast(rayDown, transform.forward, out RaycastHit hitHigh, stepCheckDistance))
-    //         {
-    //             pRigidbody.position += new Vector3(0, stepSpeed * Time.fixedDeltaTime, 0);
-    //         }
-    //     }
-    //     Debug.DrawRay(rayUp, transform.forward * stepCheckDistance, Color.yellow);
-    //     Debug.DrawRay(rayDown, transform.forward * stepCheckDistance, Color.green);
-    // }
+    void StepClimbCheck()
+    {
+        Vector3 rayUp = transform.position + Vector3.up * 0.1f;
+        Vector3 rayDown = transform.position + Vector3.up * stepHeight;
+        if (Physics.Raycast(rayUp, transform.forward, out RaycastHit hitlow, stepCheckDistance))
+        {
+            if (!Physics.Raycast(rayDown, transform.forward, out RaycastHit hitHigh, stepCheckDistance))
+            {
+                pRigidbody.position += new Vector3(0, stepSpeed * Time.fixedDeltaTime, 0);
+            }
+        }
+        Debug.DrawRay(rayUp, transform.forward * stepCheckDistance, Color.yellow);
+        Debug.DrawRay(rayDown, transform.forward * stepCheckDistance, Color.green);
+    }
 
     public void FirstPerson()
     {
@@ -361,21 +342,21 @@ public class PlayerControl : MonoBehaviour
         }
         pRigidbody.linearVelocity = velocity;
     }
-    
-    void CheckFrontObstacle()
-    {
-        Vector3 current = transform.position + Vector3.up * rayHight;
-        Ray ray = new Ray(current, transform.forward);
-        if (Physics.Raycast(ray, out RaycastHit hit, frontCheckDistance, groundLayer))
-        {
-            isFrontObstacle = true;
-        }
-        else
-        {
-            isFrontObstacle = false;
-        }
-        Debug.DrawRay(current, transform.forward * frontCheckDistance, isFrontObstacle ? Color.red : Color.green);
-    }
+
+    // void CheckFrontObstacle()
+    // {
+    //     Vector3 current = transform.position + Vector3.up * rayHight;
+    //     Ray ray = new Ray(current, transform.forward);
+    //     if (Physics.Raycast(ray, out RaycastHit hit, frontCheckDistance, groundLayer))
+    //     {
+    //         isFrontObstacle = true;
+    //     }
+    //     else
+    //     {
+    //         isFrontObstacle = false;
+    //     }
+    //     Debug.DrawRay(current, transform.forward * frontCheckDistance, isFrontObstacle ? Color.red : Color.green);
+    // }
 
     // void CheckFrontObstacle_Capsule()
     // {
@@ -397,10 +378,6 @@ public class PlayerControl : MonoBehaviour
     //         isFrontObstacle = false;
     //     }
     //     Debug.DrawLine(position1, position2 + transform.forward * frontCheckDistance, Color.yellow);
-
-
     // }
-
-
 
 }
