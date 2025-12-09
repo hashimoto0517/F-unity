@@ -4874,7 +4874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 451788343}
   subCamera: {fileID: 688684214}
-  rotationSpeed: 100
+  rotationSpeed: 150
   player: {fileID: 2137580986}
   distance: 11
   height: 6
@@ -12588,7 +12588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 332825631}
   subCamera: {fileID: 559867448}
-  rotationSpeed: 100
+  rotationSpeed: 150
   player: {fileID: 684936376}
   distance: 11
   height: 6
