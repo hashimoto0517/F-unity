@@ -4959,7 +4959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 451788343}
   subCamera: {fileID: 688684214}
-  rotationSpeed: 100
+  rotationSpeed: 150
   player: {fileID: 2137580986}
   distance: 11
   height: 6
@@ -5073,6 +5073,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 139b35ca-8b8f-49ca-9eb6-39c7cf3f6c26
     m_ActionName: 'Keyboard/Run[/Keyboard/leftShift]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 28502df2-c9df-402a-a67f-a2c215f32a58
+    m_ActionName: 'Keyboard/Mouse[/Mouse/delta]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controller
@@ -13793,7 +13797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 332825631}
   subCamera: {fileID: 559867448}
-  rotationSpeed: 100
+  rotationSpeed: 150
   player: {fileID: 684936376}
   distance: 11
   height: 6

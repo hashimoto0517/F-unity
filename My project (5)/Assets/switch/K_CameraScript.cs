@@ -5,7 +5,7 @@ public class K_CameraScript : MonoBehaviour
 {
     [SerializeField] GameObject mainCamera;      // メインカメラ格納用
     [SerializeField] GameObject subCamera;       // サブカメラ格納用
-    [SerializeField] float rotationSpeed = 100f; // カメラの回転速度
+    [SerializeField] float rotationSpeed = 150f; // カメラの回転速度
     [SerializeField] GameObject player;          // プレイヤー格納
     [SerializeField] float distance = 5f;        // プレイヤーとの距離
     [SerializeField] float height = 2f;          // カメラ高さ
@@ -38,14 +38,7 @@ public class K_CameraScript : MonoBehaviour
             Debug.LogError("MainCamera is not assigned in the Inspector!");
         }
 
-        if (player == null)
-        {
-            player = GameObject.Find("Cylinder"); // Cylinderを検索
-            if (player == null)
-            {
-                Debug.LogError("Player (Cylinder) not found in the scene!");
-            }
-        }
+     
 
         playerInput = player.GetComponent<PlayerInput>();
 
@@ -126,7 +119,7 @@ public class K_CameraScript : MonoBehaviour
                     // 一人称カメラの回転
                     mainCameraYaw += stickInput.x * rotationSpeed * Time.deltaTime;
                     mainCameraPitch -= stickInput.y * rotationSpeed * Time.deltaTime;
-                    mainCameraPitch = Mathf.Clamp(mainCameraPitch, -50f, 50f);
+                    mainCameraPitch = Mathf.Clamp(mainCameraPitch, -50f, 40f);
                     UpdateFirstPersonCameraPosition(mainCamera); // 一人称（自転）
                 }
                 else
@@ -149,7 +142,7 @@ public class K_CameraScript : MonoBehaviour
         Vector3 playerPos = player.transform.position;
         float x = playerPos.x + Mathf.Sin(subCameraYaw * Mathf.Deg2Rad) * distance;
         float z = playerPos.z + Mathf.Cos(subCameraYaw * Mathf.Deg2Rad) * distance;
-        float y = playerPos.y + height + Mathf.Sin(subCameraPitch * Mathf.Deg2Rad) * distance * 0.5f; // 高さの変化を抑える
+        float y = playerPos.y + height + Mathf.Sin(subCameraPitch * Mathf.Deg2Rad) * distance * 1.0f; // 高さの変化を抑える
 
         // カメラの位置設定
         camera.transform.position = new Vector3(x, y, z);
