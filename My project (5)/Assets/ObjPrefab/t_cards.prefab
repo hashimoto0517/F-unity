@@ -80,7 +80,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Target
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1612009232688691746, guid: 1d75a42e1283e3d4c838b3427da3e992, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
