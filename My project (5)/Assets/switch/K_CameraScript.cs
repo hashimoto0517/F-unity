@@ -7,6 +7,7 @@ public class K_CameraScript : MonoBehaviour
     [SerializeField] GameObject subCamera;       // サブカメラ格納用
     [SerializeField] float rotationSpeed = 150f; // カメラの回転速度
     [SerializeField] GameObject player;          // プレイヤー格納
+    [SerializeField] GameObject Camerahold;
     [SerializeField] float distance = 5f;        // プレイヤーとの距離
     [SerializeField] float height = 2f;          // カメラ高さ
 
@@ -139,16 +140,16 @@ public class K_CameraScript : MonoBehaviour
         if (player == null || camera == null) return;
 
         // カメラの位置を計算
-        Vector3 playerPos = player.transform.position;
-        float x = playerPos.x + Mathf.Sin(subCameraYaw * Mathf.Deg2Rad) * distance;
-        float z = playerPos.z + Mathf.Cos(subCameraYaw * Mathf.Deg2Rad) * distance;
-        float y = playerPos.y + height + Mathf.Sin(subCameraPitch * Mathf.Deg2Rad) * distance * 1.0f; // 高さの変化を抑える
+        Vector3 CameraholdPos = Camerahold.transform.position;
+        float x = CameraholdPos.x + Mathf.Sin(subCameraYaw * Mathf.Deg2Rad) * distance;
+        float z = CameraholdPos.z + Mathf.Cos(subCameraYaw * Mathf.Deg2Rad) * distance;
+        float y = CameraholdPos.y + height + Mathf.Sin(subCameraPitch * Mathf.Deg2Rad) * distance * 1.0f; // 高さの変化を抑える
 
         // カメラの位置設定
         camera.transform.position = new Vector3(x, y, z);
 
         // カメラをプレイヤーに向ける
-        Vector3 directionToPlayer = playerPos - camera.transform.position;
+        Vector3 directionToPlayer = CameraholdPos - camera.transform.position;
         camera.transform.rotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
     }
 
