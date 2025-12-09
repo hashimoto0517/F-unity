@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5e8217202c28a14cb16aaa20734c0de, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9659258
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5e8217202c28a14cb16aaa20734c0de, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.2588191
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5e8217202c28a14cb16aaa20734c0de, type: 3}
       propertyPath: m_LocalRotation.y
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5e8217202c28a14cb16aaa20734c0de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5e8217202c28a14cb16aaa20734c0de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -66,11 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d5e8217202c28a14cb16aaa20734c0de, type: 3}
       propertyPath: m_Name
-      value: baseball_bat
+      value: t_bat
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d5e8217202c28a14cb16aaa20734c0de, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5e8217202c28a14cb16aaa20734c0de, type: 3}
+      propertyPath: m_TagString
+      value: Target
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

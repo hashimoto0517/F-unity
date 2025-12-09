@@ -60,9 +60,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9927cad32f4a0242b1592a147846d63, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a9927cad32f4a0242b1592a147846d63, type: 3}
       propertyPath: m_Name
-      value: train
+      value: t_train
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a9927cad32f4a0242b1592a147846d63, type: 3}
       propertyPath: m_TagString

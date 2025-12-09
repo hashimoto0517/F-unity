@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d17983a21aa9ca048a08ce3e643ea668, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d17983a21aa9ca048a08ce3e643ea668, type: 3}
       propertyPath: m_Name
-      value: mugcup
+      value: t_mugcup
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d17983a21aa9ca048a08ce3e643ea668, type: 3}
       propertyPath: m_TagString

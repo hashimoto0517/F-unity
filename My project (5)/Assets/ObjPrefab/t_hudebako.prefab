@@ -66,11 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9458a5b645856c849ad56ffbe9a6f9f6, type: 3}
       propertyPath: m_Name
-      value: hudebako
+      value: t_hudebako
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9458a5b645856c849ad56ffbe9a6f9f6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9458a5b645856c849ad56ffbe9a6f9f6, type: 3}
+      propertyPath: m_TagString
+      value: Target
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
