@@ -9,13 +9,14 @@ public class judgeScript : MonoBehaviour
 
     private bool hasJudged = false;
 
-    [SerializeField] Select1p3Script Select1p3Script;
-    [SerializeField] Select2p3Script Select2p3Script;
 
     [SerializeField] lifeManegerScript lifeManegerScript;
     [SerializeField] CorrectNumManegerScript correctNumManegerScript;
     [SerializeField] TextMeshProUGUI comment1p;
     [SerializeField] TextMeshProUGUI comment2p;
+
+    [SerializeField] Select3Script select1p;
+    [SerializeField] Select3Script select2p;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,22 +35,22 @@ public class judgeScript : MonoBehaviour
         }
     }
 
-    public void SetASelection(GameObject obj)
+    // 選択を登録
+    public void SetSelection(int playerNumber, GameObject obj)
     {
-        selectedA = obj;
-    }
-    public void DeleteASelection()
-    {
-        selectedA = null ;
+        if (playerNumber == 1)
+            selectedA = obj;
+        else if (playerNumber == 2)
+            selectedB = obj;
     }
 
-    public void SetBSelection(GameObject obj)
+    // 選択解除
+    public void DeleteSelection(int playerNumber)
     {
-        selectedB = obj;
-    }
-    public void DeleteBSelection()
-    {
-        selectedA = null;
+        if (playerNumber == 1)
+            selectedA = null;
+        else if (playerNumber == 2)
+            selectedB = null;
     }
 
     void Judge(GameObject a, GameObject b)
@@ -67,8 +68,9 @@ public class judgeScript : MonoBehaviour
 
                 correctNumManegerScript.Correct();
 
-                Select1p3Script.ChangeTag();
-                Select2p3Script.ChangeTag();
+                // 選択済みオブジェクトのタグを変更
+                a.tag = "Untagged";
+                b.tag = "Untagged";
             }
             else
             {
@@ -86,7 +88,6 @@ public class judgeScript : MonoBehaviour
 
         // リセット
         Invoke(nameof(ResetSelections), 1.5f);
-
     }
 
     void ResetSelections()
@@ -94,10 +95,9 @@ public class judgeScript : MonoBehaviour
         selectedA = null;
         selectedB = null;
         hasJudged = false;
-        Select1p3Script.ResetSelect();
-        Select2p3Script.ResetSelect();
-        comment1p.text = "";
-        comment2p.text = "";
+
+        select1p.ResetSelect();
+        select2p.ResetSelect();
 
         Debug.Log("選択リセット");
     }
