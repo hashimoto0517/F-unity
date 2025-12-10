@@ -2169,6 +2169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2344171192267872117, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3304951169447506260, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
       propertyPath: m_Name
       value: Cylinder

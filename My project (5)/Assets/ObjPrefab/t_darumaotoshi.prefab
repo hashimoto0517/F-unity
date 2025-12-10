@@ -69,7 +69,7 @@ PrefabInstance:
       addedObject: {fileID: -7191486544418212888}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c4b7b3cf84e90d489ab5deef52dc481, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2893822490507728028}
+      addedObject: {fileID: 7834436158556123752}
   m_SourcePrefab: {fileID: 100100000, guid: 8c4b7b3cf84e90d489ab5deef52dc481, type: 3}
 --- !u!1 &8502239059617581782 stripped
 GameObject:
@@ -99,30 +99,17 @@ CapsuleCollider:
   m_Height: 4.7
   m_Direction: 1
   m_Center: {x: 0, y: 2.35, z: 0}
---- !u!54 &2893822490507728028
-Rigidbody:
+--- !u!114 &7834436158556123752
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8502239059617581782}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c982b709356c734e8dadebbe42ca6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMistake: 0
+  category: daruma

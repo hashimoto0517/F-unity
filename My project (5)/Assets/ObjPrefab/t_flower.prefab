@@ -86,7 +86,7 @@ PrefabInstance:
       addedObject: {fileID: -4094064425164990070}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a034348c7078814dbacc0ad9e835a71, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 71516602247786063}
+      addedObject: {fileID: 1605636919044057517}
   m_SourcePrefab: {fileID: 100100000, guid: 9a034348c7078814dbacc0ad9e835a71, type: 3}
 --- !u!1 &5767766627934118665 stripped
 GameObject:
@@ -116,30 +116,17 @@ CapsuleCollider:
   m_Height: 9
   m_Direction: 1
   m_Center: {x: 0, y: 4.5, z: 0}
---- !u!54 &71516602247786063
-Rigidbody:
+--- !u!114 &1605636919044057517
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5767766627934118665}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c982b709356c734e8dadebbe42ca6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMistake: 0
+  category: flower

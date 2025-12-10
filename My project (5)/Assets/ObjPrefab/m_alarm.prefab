@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5229288279329453271}
   - component: {fileID: 8565084443218418804}
-  - component: {fileID: 344010620541803157}
+  - component: {fileID: 7257966017504681502}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,33 +54,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.012, z: 0.007}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &344010620541803157
-Rigidbody:
+--- !u!114 &7257966017504681502
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9150388807073348792}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c982b709356c734e8dadebbe42ca6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMistake: 1
+  category: alarm
 --- !u!1001 &2638793146644250723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,15 +90,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
       propertyPath: m_LocalRotation.w

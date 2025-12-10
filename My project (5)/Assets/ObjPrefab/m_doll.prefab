@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4953579915692447636}
   - component: {fileID: 5978672386279330339}
   - component: {fileID: 7058513403417814417}
+  - component: {fileID: 8839730959244331755}
   m_Layer: 0
   m_Name: m_doll
   m_TagString: Target
@@ -139,3 +140,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8839730959244331755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137205700364880415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c982b709356c734e8dadebbe42ca6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMistake: 1
+  category: doll
