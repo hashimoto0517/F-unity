@@ -393,7 +393,13 @@ public class PlayerControl : MonoBehaviour
     // }
     public void PlayFootStepAudio()
     {
-        if (!isground)
+        Vector3 horizontal = pRigidbody.linearVelocity;
+        horizontal.y = 0;
+        if (horizontal.magnitude < 0.1f)
+        {
+            return;
+        }
+        if (!isground && pRigidbody.linearVelocity.y > 0.2f)
         {
             return;
         }
@@ -401,22 +407,22 @@ public class PlayerControl : MonoBehaviour
         {
             return;
         }
-        if (playerAudio.isPlaying)
-        {
-            return;
-        }
+        // if (playerAudio.isPlaying)
+        // {
+        //     return;
+        // }
         AudioClip audioClip = forwardAmount > 1.5f ? runAudio : walkAudio;
         if (audioClip == null)
         {
             return;
         }
-        //playerAudio.PlayOneShot(audioClip);
+        // playerAudio.PlayOneShot(audioClip);
         playerAudio.clip = audioClip;
         playerAudio.Play();
     }
     void StopAudio()
     {
-        if (!isground && playerAudio.isPlaying)
+        if (pRigidbody.linearVelocity.y > 0.2f && playerAudio.isPlaying)
         {
             playerAudio.Stop();
             return;

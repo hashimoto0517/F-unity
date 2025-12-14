@@ -6842,8 +6842,8 @@ MonoBehaviour:
   maxFallSpeed: 100
   playerAudio: {fileID: 684936387}
   actionAudio: {fileID: 684936388}
-  runAudio: {fileID: 8300000, guid: 8a9d8e48eeb329d4cbd183214a118b1d, type: 3}
-  walkAudio: {fileID: 8300000, guid: 96e5eef6ef591f842b33017913510c7a, type: 3}
+  runAudio: {fileID: 8300000, guid: 7ff7a8125999af84085444f8e99a0e7d, type: 3}
+  walkAudio: {fileID: 8300000, guid: 308678f9182c15941802300baae1218d, type: 3}
   jumpAudio: {fileID: 8300000, guid: 0268cf4512cf50e4b8bf34aac4f6b1ee, type: 3}
 --- !u!136 &684936380
 CapsuleCollider:
@@ -8908,7 +8908,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 3a147e6e36236fc4ebab963c990c373a, type: 3}
   m_Resource: {fileID: 8300000, guid: 3a147e6e36236fc4ebab963c990c373a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16616,8 +16616,8 @@ MonoBehaviour:
   maxFallSpeed: 100
   playerAudio: {fileID: 2137580995}
   actionAudio: {fileID: 2137580996}
-  runAudio: {fileID: 8300000, guid: 8a9d8e48eeb329d4cbd183214a118b1d, type: 3}
-  walkAudio: {fileID: 8300000, guid: 96e5eef6ef591f842b33017913510c7a, type: 3}
+  runAudio: {fileID: 8300000, guid: 7ff7a8125999af84085444f8e99a0e7d, type: 3}
+  walkAudio: {fileID: 8300000, guid: 308678f9182c15941802300baae1218d, type: 3}
   jumpAudio: {fileID: 8300000, guid: 0268cf4512cf50e4b8bf34aac4f6b1ee, type: 3}
 --- !u!136 &2137580991
 CapsuleCollider:
