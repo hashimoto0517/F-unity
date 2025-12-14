@@ -52,6 +52,12 @@ public class ramdomScript : MonoBehaviour
 
     public void SpawnPair(GameObject prefabA, GameObject prefabB, Transform point1, Transform point2)
     {
+        if (nowSet >= setNum)
+        {
+            Debug.LogWarning("全セットを使い切りました");
+            return;
+        }
+
         if (obj[nowSet] == 0)
         {
             // AA or BB

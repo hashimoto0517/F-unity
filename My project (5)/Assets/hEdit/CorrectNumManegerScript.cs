@@ -5,14 +5,17 @@ using UnityEngine.SceneManagement;
 public class CorrectNumManegerScript : MonoBehaviour
 {
     public int correctNum = 0;
-    public  int denominator = 2;
+    public int denominator;
     [SerializeField] TextMeshProUGUI comment1p;
     [SerializeField] TextMeshProUGUI comment2p;
+    [SerializeField] correctUIScript uiScript1P;
+    [SerializeField] correctUIScript uiScript2P;
+    [SerializeField] ramdomScript ramdomScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        denominator = ramdomScript.differenceNum;
     }
 
     // Update is called once per frame
@@ -24,6 +27,8 @@ public class CorrectNumManegerScript : MonoBehaviour
     public void Correct()
     {
         correctNum++;
+        uiScript1P.UpdateCorrectUI();
+        uiScript2P.UpdateCorrectUI();
 
         if (correctNum == denominator)
         {
