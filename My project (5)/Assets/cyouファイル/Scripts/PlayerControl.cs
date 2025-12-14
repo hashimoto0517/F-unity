@@ -15,7 +15,6 @@ public class PlayerControl : MonoBehaviour
 
 
 
-
     public float turnAmount;
     public float turnSpeed = 20f;
     private Rigidbody pRigidbody;
