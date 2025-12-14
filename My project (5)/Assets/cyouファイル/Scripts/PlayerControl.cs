@@ -1,4 +1,5 @@
 using System.Runtime.Serialization.Formatters;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -44,6 +45,11 @@ public class PlayerControl : MonoBehaviour
 
     public float customFallSpeed = 65;
     public float maxFallSpeed = 100;
+    public AudioSource playerAudio;
+    public AudioSource actionAudio;
+    public AudioClip runAudio;
+    public AudioClip walkAudio;
+    public AudioClip jumpAudio;
 
 
 
@@ -63,6 +69,7 @@ public class PlayerControl : MonoBehaviour
     {
         pRigidbody = GetComponent<Rigidbody>();
         pAnimator = GetComponent<Animator>();
+        //playerAudio = GetComponent<AudioSource>();
         //capsule = GetComponent<CapsuleCollider>();
     }
 
@@ -70,7 +77,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         RayCheckGround();
-
+        StopAudio();
     }
     void FixedUpdate()
     {
@@ -123,7 +130,12 @@ public class PlayerControl : MonoBehaviour
         {
             return;
         }
+        // if (playerAudio.isPlaying)
+        // {
+        //     playerAudio.Stop();
+        // }
         pAnimator.SetTrigger("JumpTrigger");
+        actionAudio.PlayOneShot(jumpAudio);
         pRigidbody.AddForce(Vector3.up * jumpHight, ForceMode.Impulse);
     }
     public void Run(InputAction.CallbackContext button)
@@ -379,5 +391,39 @@ public class PlayerControl : MonoBehaviour
     //     }
     //     Debug.DrawLine(position1, position2 + transform.forward * frontCheckDistance, Color.yellow);
     // }
-
+    public void PlayFootStepAudio()
+    {
+        if (!isground)
+        {
+            return;
+        }
+        if (forwardAmount < 0.1f)
+        {
+            return;
+        }
+        if (playerAudio.isPlaying)
+        {
+            return;
+        }
+        AudioClip audioClip = forwardAmount > 1.5f ? runAudio : walkAudio;
+        if (audioClip == null)
+        {
+            return;
+        }
+        //playerAudio.PlayOneShot(audioClip);
+        playerAudio.clip = audioClip;
+        playerAudio.Play();
+    }
+    void StopAudio()
+    {
+        if (!isground && playerAudio.isPlaying)
+        {
+            playerAudio.Stop();
+            return;
+        }
+        if (forwardAmount < 0.1f && playerAudio.isPlaying)
+        {
+            playerAudio.Stop();
+        }
+    }
 }
