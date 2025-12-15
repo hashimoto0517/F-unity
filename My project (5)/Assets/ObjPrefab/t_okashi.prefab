@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c982b709356c734e8dadebbe42ca6a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMistake: 1
+  isMistake: 0
   category: snack
 --- !u!65 &4902152284209057664
 BoxCollider:

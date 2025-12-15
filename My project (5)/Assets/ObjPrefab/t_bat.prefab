@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4964227234495424132}
   m_Layer: 0
   m_Name: t_bat
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,6 +82,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4382346225027472450, guid: 307fa9036fbbf074ab6751e212669caa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093147868711788038, guid: 307fa9036fbbf074ab6751e212669caa, type: 3}
+      propertyPath: isMistake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

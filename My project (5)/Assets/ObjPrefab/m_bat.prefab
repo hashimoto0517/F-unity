@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7513782590603697702}
   m_Layer: 0
   m_Name: m_bat
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +43,10 @@ PrefabInstance:
     - target: {fileID: 2355446056348364333, guid: d2f65d495a50b7742807d0e0e5cb39a7, type: 3}
       propertyPath: m_Name
       value: m_bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2714384127358793263, guid: d2f65d495a50b7742807d0e0e5cb39a7, type: 3}
+      propertyPath: m_TagString
+      value: Target
       objectReference: {fileID: 0}
     - target: {fileID: 3169383060639413399, guid: d2f65d495a50b7742807d0e0e5cb39a7, type: 3}
       propertyPath: m_LocalPosition.x
