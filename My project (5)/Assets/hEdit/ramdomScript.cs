@@ -64,13 +64,13 @@ public class ramdomScript : MonoBehaviour
             int secondRandom = Random.Range(0, 2);
             if (secondRandom == 0)
             {
-                Instantiate(prefabA, point1.position, Quaternion.identity);
-                Instantiate(prefabA, point2.position, Quaternion.identity);
+                Instantiate(prefabA, point1.position, point1.rotation);
+                Instantiate(prefabA, point2.position, point2.rotation);
             }
             else
             {
-                Instantiate(prefabB, point1.position, Quaternion.identity);
-                Instantiate(prefabB, point2.position, Quaternion.identity);
+                Instantiate(prefabB, point1.position, point1.rotation);
+                Instantiate(prefabB, point2.position, point2.rotation);
             }
         }
         else
@@ -79,13 +79,13 @@ public class ramdomScript : MonoBehaviour
             int secondRandom = Random.Range(0, 2);
             if (secondRandom == 0)
             {
-                Instantiate(prefabA, point1.position, Quaternion.identity);
-                Instantiate(prefabB, point2.position, Quaternion.identity);
+                Instantiate(prefabA, point1.position, point1.rotation);
+                Instantiate(prefabB, point2.position, point2.rotation);
             }
             else
             {
-                Instantiate(prefabB, point1.position, Quaternion.identity);
-                Instantiate(prefabA, point2.position, Quaternion.identity);
+                Instantiate(prefabB, point1.position, point1.rotation);
+                Instantiate(prefabA, point2.position, point2.rotation);
             }
         }
 
