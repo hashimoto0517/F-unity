@@ -64,9 +64,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8513424388201257645, guid: eb5d509288a4b7340a4c4fe69419d618, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eb5d509288a4b7340a4c4fe69419d618, type: 3}
       propertyPath: m_Name
       value: wall shelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb5d509288a4b7340a4c4fe69419d618, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb5d509288a4b7340a4c4fe69419d618, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
