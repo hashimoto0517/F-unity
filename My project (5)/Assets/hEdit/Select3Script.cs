@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 
 public class Select3Script : MonoBehaviour
 {
     [SerializeField] int playerNumber; // 1 or 2
     [SerializeField] TextMeshProUGUI sideTextA;
-    [SerializeField] TextMeshProUGUI sideTextB;
+    [SerializeField] Image sideB;
     [SerializeField] judgeScript judgeScript;
 
     private GameObject selectedObject = null;
@@ -23,6 +24,8 @@ public class Select3Script : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         selectAction = playerInput.actions.FindAction("Select");
         deselectAction = playerInput.actions.FindAction("Deselect");
+
+        sideB.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -65,14 +68,14 @@ public class Select3Script : MonoBehaviour
         Debug.Log($"{playerNumber}pëIëê¨å˜: {obj.name}");
 
         SetTarget(obj);
-        sideTextB.text = "Selected";
+        sideB.gameObject.SetActive(true);
     }
 
     public void ResetSelect()
     {
         selectedObject = null;
         sideTextA.text = "";
-        sideTextB.text = "";
+        sideB.gameObject.SetActive(false);
     }
 
     void Deselect(GameObject obj)
@@ -84,7 +87,7 @@ public class Select3Script : MonoBehaviour
         Debug.Log($"{playerNumber}pëIëâèú: {obj.name}");
 
         sideTextA.text = "";
-        sideTextB.text = "";
+        sideB.gameObject.SetActive(false);
     }
 
     public void SetTarget(GameObject targetObject)

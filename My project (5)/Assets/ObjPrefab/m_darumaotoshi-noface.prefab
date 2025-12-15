@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1957789576101412145, guid: 3cca0a0922b3eef48b1ee053f340c27a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -102,7 +102,7 @@ CapsuleCollider:
   m_Radius: 1
   m_Height: 4.7
   m_Direction: 1
-  m_Center: {x: 0, y: 2.35, z: 0}
+  m_Center: {x: 0, y: 2.83, z: 0}
 --- !u!114 &655678161459808883
 MonoBehaviour:
   m_ObjectHideFlags: 0

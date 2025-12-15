@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ramdomScript : MonoBehaviour
 {
-    public int setNum = 24;          // ‘”
+    public int setNum = 25;          // ‘”
     public int differenceNum = 10;   // ŠÔˆá‚¢‚Ì”
     public int[] obj;           // 0=“¯‚¶, 1=ˆá‚¤
     public int nowSet = 0;
