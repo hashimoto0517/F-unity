@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1592934785405721687}
   m_Layer: 0
   m_Name: m_kami
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,6 +83,10 @@ PrefabInstance:
     - target: {fileID: 2468732131128544146, guid: cdda001489983f14c9a5875ff09b1993, type: 3}
       propertyPath: m_Name
       value: _m_kami
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468732131128544146, guid: cdda001489983f14c9a5875ff09b1993, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

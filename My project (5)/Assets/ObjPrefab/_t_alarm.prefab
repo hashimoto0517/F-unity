@@ -134,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
       propertyPath: m_Name
-      value: t_alarm
+      value: _t_alarm
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
       propertyPath: m_TagString
