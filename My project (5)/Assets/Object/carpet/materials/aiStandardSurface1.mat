@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BASE_COLOR_MAP:
-        m_Texture: {fileID: 2800000, guid: d664da8282b5c3749970c19d9959e64e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 508a9b9f7ed5c154783d47575fe6fbea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EMISSION_COLOR_MAP:
@@ -84,7 +84,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.2
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _METALNESS: 0
     - _Metallic: 0
@@ -95,7 +95,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SPECULAR_IOR: 1.5
-    - _SPECULAR_ROUGHNESS: 0.2
+    - _SPECULAR_ROUGHNESS: 1
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -115,7 +115,7 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1300279269733259394
+--- !u!114 &4235643601477810346
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1042,14 +1042,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1577637346}
     m_Modifications:
-    - target: {fileID: 63197664960619952, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 526f32d676dc615408c2f90098ef1aa2, type: 3}
-    - target: {fileID: 63197664960619952, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 718490336617756529, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1131,29 +1123,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2304107282755835060, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
-      propertyPath: fullHeart
-      value: 
-      objectReference: {fileID: 21300000, guid: 526f32d676dc615408c2f90098ef1aa2, type: 3}
-    - target: {fileID: 2304107282755835060, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
-      propertyPath: emptyHeart
-      value: 
-      objectReference: {fileID: 21300000, guid: 667c062327e9e214e9985d439e3b87aa, type: 3}
-    - target: {fileID: 2304107282755835060, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
       propertyPath: lifeManeger
       value: 
       objectReference: {fileID: 1823904516}
-    - target: {fileID: 2908645265694735107, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 526f32d676dc615408c2f90098ef1aa2, type: 3}
-    - target: {fileID: 3472007488610319318, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
-      propertyPath: m_text
-      value: ' / '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5179120584615449090, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 526f32d676dc615408c2f90098ef1aa2, type: 3}
     - target: {fileID: 6946127501035993681, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
       propertyPath: m_Name
       value: Canvas_h
@@ -3534,25 +3506,9 @@ PrefabInstance:
       value: Canvas_h
       objectReference: {fileID: 0}
     - target: {fileID: 761925862387903613, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
-      propertyPath: fullHeart
-      value: 
-      objectReference: {fileID: 21300000, guid: 526f32d676dc615408c2f90098ef1aa2, type: 3}
-    - target: {fileID: 761925862387903613, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
-      propertyPath: emptyHeart
-      value: 
-      objectReference: {fileID: 21300000, guid: 667c062327e9e214e9985d439e3b87aa, type: 3}
-    - target: {fileID: 761925862387903613, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
       propertyPath: lifeManeger
       value: 
       objectReference: {fileID: 1823904516}
-    - target: {fileID: 1927030960268173335, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 526f32d676dc615408c2f90098ef1aa2, type: 3}
-    - target: {fileID: 2855256443746294734, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 526f32d676dc615408c2f90098ef1aa2, type: 3}
     - target: {fileID: 2895451531100161640, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3632,14 +3588,6 @@ PrefabInstance:
     - target: {fileID: 2895451531100161640, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4490616610778668175, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 526f32d676dc615408c2f90098ef1aa2, type: 3}
-    - target: {fileID: 5029928101634234596, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
-      propertyPath: m_text
-      value: ' / '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
