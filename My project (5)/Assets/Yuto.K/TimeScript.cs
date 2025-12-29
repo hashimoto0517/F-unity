@@ -12,7 +12,7 @@ public class CountdownTimer : MonoBehaviour
 
     [SerializeField] private float countdownTime = 180f;    // 開始時間（秒）
     [SerializeField] private float delayBeforeEnd = 3f;     // 0秒後の遅延
-    // 新しく追加：最後の10秒カウントダウン表示
+    //最後の10秒カウントダウン表示
     [SerializeField] private Image countdownCenterImage;    // 画面中央に大きく表示するIイメージ
     [SerializeField] private Sprite[] countdownSprites;     // 10,9,8,...,1 のスプライト
     public float currentTime;
