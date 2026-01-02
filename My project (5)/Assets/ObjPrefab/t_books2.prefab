@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 0
   category: books2
+  categoryImage: {fileID: 21300000, guid: 05bdfc4a9f11e2a4eb09d76417d1a8ae, type: 3}

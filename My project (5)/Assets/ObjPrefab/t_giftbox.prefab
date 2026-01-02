@@ -69,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 0
   category: giftBox
+  categoryImage: {fileID: 21300000, guid: 6ba4d9535397519469a926e993915071, type: 3}
 --- !u!1001 &1091890245174812759
 PrefabInstance:
   m_ObjectHideFlags: 0

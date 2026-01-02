@@ -8,8 +8,8 @@ public class lifeManegerScript : MonoBehaviour
     public int maxLife = 2;          // 最大ライフ
     public int currentLife;          // 現在のライフ
 
-    [SerializeField] TextMeshProUGUI comment1p;
-    [SerializeField] TextMeshProUGUI comment2p;
+    //[SerializeField] TextMeshProUGUI comment1p;
+    //[SerializeField] TextMeshProUGUI comment2p;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +20,7 @@ public class lifeManegerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentLife <= 0)
+        /*if(currentLife <= 0)
         {
             //end
             comment1p.text = "Failed";
@@ -28,7 +28,7 @@ public class lifeManegerScript : MonoBehaviour
 
             Invoke(nameof(End), 1.5f);
 
-        }
+        }*/
     }
 
     void End()

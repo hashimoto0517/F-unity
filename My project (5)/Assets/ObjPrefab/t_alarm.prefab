@@ -40,6 +40,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3701854705630006610}
     m_Modifications:
+    - target: {fileID: 2214360422349268980, guid: c7f5d0c15c4f80f44ae5abc1fc101a8b, type: 3}
+      propertyPath: categoryImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ba8801997e11bda46991e62368881c43, type: 3}
     - target: {fileID: 8574872858837471191, guid: c7f5d0c15c4f80f44ae5abc1fc101a8b, type: 3}
       propertyPath: m_Name
       value: _t_alarm

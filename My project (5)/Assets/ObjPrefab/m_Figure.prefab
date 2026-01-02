@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: figure
+  categoryImage: {fileID: 21300000, guid: dbeb05dadac73004ca4607ec37f97d9b, type: 3}

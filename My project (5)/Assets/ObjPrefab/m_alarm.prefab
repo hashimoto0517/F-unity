@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _m_alarm
       objectReference: {fileID: 0}
+    - target: {fileID: 7257966017504681502, guid: c5aecf9cfec360041ad3b248b410960b, type: 3}
+      propertyPath: categoryImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ba8801997e11bda46991e62368881c43, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Select3Script : MonoBehaviour
 {
     [SerializeField] int playerNumber; // 1 or 2
-    [SerializeField] TextMeshProUGUI sideTextA;
+    [SerializeField] Image sideA;
     [SerializeField] Image sideB;
     [SerializeField] judgeScript judgeScript;
 
@@ -17,6 +17,13 @@ public class Select3Script : MonoBehaviour
     private InputAction deselectAction;
     private InfoScript currentInfo;
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip trySelectClip;
+    [SerializeField] AudioClip SelectClip;
+
+    [SerializeField] AudioClip correctClip;
+    [SerializeField] AudioClip incorrectClip;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +32,7 @@ public class Select3Script : MonoBehaviour
         selectAction = playerInput.actions.FindAction("Select");
         deselectAction = playerInput.actions.FindAction("Deselect");
 
+        sideA.gameObject.SetActive(false);
         sideB.gameObject.SetActive(false);
     }
 
@@ -45,7 +53,10 @@ public class Select3Script : MonoBehaviour
     private void TrySelect()
     {
         if (currentTarget == null || !currentTarget.CompareTag("Target"))
-            return;
+        {
+            audioSource.PlayOneShot(trySelectClip);
+            return; 
+        }
         Select(currentTarget.gameObject);
     }
 
@@ -69,12 +80,14 @@ public class Select3Script : MonoBehaviour
 
         SetTarget(obj);
         sideB.gameObject.SetActive(true);
+
+        audioSource.PlayOneShot(SelectClip);
     }
 
     public void ResetSelect()
     {
         selectedObject = null;
-        sideTextA.text = "";
+        sideA.gameObject.SetActive(false);
         sideB.gameObject.SetActive(false);
     }
 
@@ -86,7 +99,7 @@ public class Select3Script : MonoBehaviour
 
         Debug.Log($"{playerNumber}pëIëâèú: {obj.name}");
 
-        sideTextA.text = "";
+        sideA.gameObject.SetActive(false);
         sideB.gameObject.SetActive(false);
     }
 
@@ -96,10 +109,23 @@ public class Select3Script : MonoBehaviour
         UpdateUI();
     }
 
+    public void CorrectSEPlay()
+    {
+        audioSource.PlayOneShot(correctClip);
+    }
+
+    public void incorrectSEPlay()
+    {
+        audioSource.PlayOneShot(incorrectClip);
+    }
+
     private void UpdateUI()
     {
         if (currentInfo != null)
-            sideTextA.text = currentInfo.category;
+        { 
+            sideA.sprite = currentInfo.categoryImage;
+            sideA.gameObject.SetActive (true);
+        }
     }
 
     void OnTriggerEnter(Collider other)

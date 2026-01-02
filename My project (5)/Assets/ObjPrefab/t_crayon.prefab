@@ -123,3 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 0
   category: crayon
+  categoryImage: {fileID: 21300000, guid: 14e86425e68841e479f8fb37e2733615, type: 3}

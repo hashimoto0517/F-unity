@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 0
   category: card
+  categoryImage: {fileID: 21300000, guid: 7ba9dea8778d76a438c0057f6647ee09, type: 3}
 --- !u!1001 &7047862937534861675
 PrefabInstance:
   m_ObjectHideFlags: 0

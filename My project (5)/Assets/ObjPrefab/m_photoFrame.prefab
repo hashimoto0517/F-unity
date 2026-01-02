@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: photoStand
+  categoryImage: {fileID: 21300000, guid: d38df41a496b8ee4ea8d0ee3bebbdd9e, type: 3}

@@ -144,3 +144,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: door
+  categoryImage: {fileID: 21300000, guid: 930ba6d613c199749af5549ec9808d6e, type: 3}

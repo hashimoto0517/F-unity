@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class judgeScript : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class judgeScript : MonoBehaviour
 
     [SerializeField] lifeManegerScript lifeManegerScript;
     [SerializeField] CorrectNumManegerScript correctNumManegerScript;
-    [SerializeField] TextMeshProUGUI comment1p;
-    [SerializeField] TextMeshProUGUI comment2p;
+    [SerializeField] Image comment1p;
+    [SerializeField] Image comment2p;
+    [SerializeField] Sprite correctImage;
+    [SerializeField] Sprite incorrectImage;
 
     [SerializeField] Select3Script select1p;
     [SerializeField] Select3Script select2p;
@@ -21,7 +24,8 @@ public class judgeScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        comment1p.gameObject.SetActive(false);
+        comment2p.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -63,10 +67,12 @@ public class judgeScript : MonoBehaviour
             if (infoA.isMistake != infoB.isMistake && infoA.category == infoB.category)
             {
                 Debug.Log("正解");
-                comment1p.text = "Correct";
-                comment2p.text = "Correct";
+                comment1p.sprite = correctImage;
+                comment2p.sprite = correctImage;
 
                 correctNumManegerScript.Correct();
+                select1p.CorrectSEPlay();
+                select2p.CorrectSEPlay();
 
                 // 選択済みオブジェクトのタグを変更
                 a.tag = "Untagged";
@@ -75,9 +81,11 @@ public class judgeScript : MonoBehaviour
             else
             {
                 Debug.Log("不正解");
-                comment1p.text = "Incorrect";
-                comment2p.text = "Incorrect";
+                comment1p.sprite = incorrectImage;
+                comment2p.sprite = incorrectImage;
 
+                select1p.incorrectSEPlay();
+                select1p.incorrectSEPlay();
                 lifeManegerScript.MinusLife();
             }
         }
@@ -86,12 +94,18 @@ public class judgeScript : MonoBehaviour
             Debug.Log("判定できません：情報不足");
         }
 
+        comment1p.gameObject.SetActive(true);
+        comment2p.gameObject.SetActive(true);
+
         // リセット
         Invoke(nameof(ResetSelections), 1.5f);
     }
 
     void ResetSelections()
     {
+        comment1p.gameObject.SetActive(false);
+        comment2p.gameObject.SetActive(false);
+
         selectedA = null;
         selectedB = null;
         hasJudged = false;

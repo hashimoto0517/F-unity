@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 0
   category: train
+  categoryImage: {fileID: 21300000, guid: 4dea5f0ac4d89774580686d3ccdb8df3, type: 3}
 --- !u!65 &6400380288849126414
 BoxCollider:
   m_ObjectHideFlags: 0

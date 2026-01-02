@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 0
   category: paper
+  categoryImage: {fileID: 21300000, guid: d52b165f564606a4abe3fab734129287, type: 3}
 --- !u!1001 &5102075663073174024
 PrefabInstance:
   m_ObjectHideFlags: 0

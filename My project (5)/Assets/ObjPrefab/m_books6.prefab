@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: books6
+  categoryImage: {fileID: 21300000, guid: 720a864bb5503044888045c1a287fb76, type: 3}
 --- !u!1001 &3981139250271562103
 PrefabInstance:
   m_ObjectHideFlags: 0

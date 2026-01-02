@@ -160,3 +160,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: stationery
+  categoryImage: {fileID: 21300000, guid: fb7b38e630737c0419edd4adc86a5ec7, type: 3}

@@ -123,3 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: mugcap
+  categoryImage: {fileID: 21300000, guid: 367bf83391be1b346a7a7cc5dd22a71a, type: 3}

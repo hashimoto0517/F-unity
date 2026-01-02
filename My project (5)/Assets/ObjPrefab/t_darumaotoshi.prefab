@@ -113,3 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 0
   category: daruma
+  categoryImage: {fileID: 21300000, guid: 134ddec3141fab049a303c5e4f9e5dc0, type: 3}

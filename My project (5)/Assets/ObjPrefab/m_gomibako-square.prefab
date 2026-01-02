@@ -111,3 +111,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: trashBox
+  categoryImage: {fileID: 21300000, guid: 39711996f97980a478fd9da159b7cda2, type: 3}

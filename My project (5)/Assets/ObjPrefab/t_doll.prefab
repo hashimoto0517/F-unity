@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 0
   category: doll
+  categoryImage: {fileID: 21300000, guid: 5155f7bc400af834bb863eb222fedf8e, type: 3}
