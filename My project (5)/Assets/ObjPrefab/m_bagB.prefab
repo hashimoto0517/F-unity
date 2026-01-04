@@ -69,12 +69,20 @@ PrefabInstance:
       value: m_bagB
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8a7cbb7ffd3c5664d805010e9ceb4476, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a7cbb7ffd3c5664d805010e9ceb4476, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8a7cbb7ffd3c5664d805010e9ceb4476, type: 3}
       propertyPath: m_TagString
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487710754180378890, guid: 8a7cbb7ffd3c5664d805010e9ceb4476, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2723036090057052725, guid: 8a7cbb7ffd3c5664d805010e9ceb4476, type: 3}

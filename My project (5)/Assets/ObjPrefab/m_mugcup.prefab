@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4733461053496908809, guid: 3aed0e522fc2f344a82f68a33f8d3959, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -979961843356035243, guid: 3aed0e522fc2f344a82f68a33f8d3959, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -63,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3aed0e522fc2f344a82f68a33f8d3959, type: 3}
       propertyPath: m_Name
       value: m_mugcup
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3aed0e522fc2f344a82f68a33f8d3959, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3aed0e522fc2f344a82f68a33f8d3959, type: 3}
       propertyPath: m_IsActive

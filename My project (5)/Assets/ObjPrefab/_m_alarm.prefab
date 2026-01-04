@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5229288279329453271}
   - component: {fileID: 8565084443218418804}
   - component: {fileID: 7257966017504681502}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Target
   m_Icon: {fileID: 0}
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: alarm
+  categoryImage: {fileID: 0}
 --- !u!1001 &2638793146644250723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135,6 +136,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
       propertyPath: m_Name
       value: _m_alarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6e6547d98d7ba5d4fa7d8971e74ea9ef, type: 3}
       propertyPath: m_TagString

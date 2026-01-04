@@ -64,9 +64,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8513424388201257645, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7609145667655734672, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3957782524123411102, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
       propertyPath: m_Name
       value: m_photoFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
       propertyPath: m_IsActive
@@ -75,6 +91,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
       propertyPath: m_TagString
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147352175773068163, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618128200071642861, guid: ef4498018aaf5de4f8cce594986e223f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

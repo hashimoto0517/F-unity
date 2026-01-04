@@ -64,9 +64,17 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5997758297935909444, guid: 83e5e5f7772bfb640bb83df74aadf166, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 83e5e5f7772bfb640bb83df74aadf166, type: 3}
       propertyPath: m_Name
       value: books-three-orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83e5e5f7772bfb640bb83df74aadf166, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 83e5e5f7772bfb640bb83df74aadf166, type: 3}
       propertyPath: m_IsActive

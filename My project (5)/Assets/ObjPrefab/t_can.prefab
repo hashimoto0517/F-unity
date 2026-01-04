@@ -64,9 +64,29 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7917291961305824890, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5731229141766309534, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2793727289926329592, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1006227491098686444, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
       propertyPath: m_Name
       value: t_can
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
       propertyPath: m_IsActive
@@ -75,6 +95,26 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
       propertyPath: m_TagString
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156093288285338821, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507767883509144192, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779745573541866595, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513637409214676183, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507991846469727000, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5055591447599808465, guid: f780f3d947981fb4f9e7a49ab97d21fb, type: 3}

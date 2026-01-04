@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4703930990427711666}
   - component: {fileID: 7484793579139657927}
   - component: {fileID: 8061455511778251310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Target
   m_Icon: {fileID: 0}
@@ -204,12 +204,20 @@ PrefabInstance:
       value: m_books6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d3d380027eaf7684997af96d3af547bb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3d380027eaf7684997af96d3af547bb, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d3d380027eaf7684997af96d3af547bb, type: 3}
       propertyPath: m_TagString
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473888895575511401, guid: d3d380027eaf7684997af96d3af547bb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

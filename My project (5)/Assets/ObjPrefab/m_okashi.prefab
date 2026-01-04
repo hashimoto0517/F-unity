@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8264331622888916410}
   - component: {fileID: 5269190601264881080}
   - component: {fileID: 5350953424986542953}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Target
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMistake: 1
   category: snack
+  categoryImage: {fileID: 0}
 --- !u!65 &5350953424986542953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77,7 +78,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7374099058922973866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: m_okashi
   m_TagString: Target
   m_Icon: {fileID: 0}
@@ -112,6 +113,10 @@ PrefabInstance:
     - target: {fileID: 2302811056708427257, guid: 980b469520c35d8458417b56ff2ada65, type: 3}
       propertyPath: m_Name
       value: okashi1 Variant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302811056708427257, guid: 980b469520c35d8458417b56ff2ada65, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3701834811945314303, guid: 980b469520c35d8458417b56ff2ada65, type: 3}
       propertyPath: m_LocalPosition.x

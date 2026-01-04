@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 56705190218685732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: t_kami
   m_TagString: Target
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5482214009260889364}
   - component: {fileID: 1441265499209709043}
   - component: {fileID: 2990650132019330322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Target
   m_Icon: {fileID: 0}
@@ -165,6 +165,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: baa9caac0acbfee46bbb44d1594a33d4, type: 3}
       propertyPath: m_Name
       value: kami1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: baa9caac0acbfee46bbb44d1594a33d4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

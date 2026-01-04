@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2797256186451396990}
   - component: {fileID: 249820918359718834}
   - component: {fileID: 1899016328790846321}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Target
   m_Icon: {fileID: 0}
@@ -177,9 +177,17 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1251272390412983468, guid: ef84f3909f1634b44aff731dfbd10002, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef84f3909f1634b44aff731dfbd10002, type: 3}
       propertyPath: m_Name
       value: t_books6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef84f3909f1634b44aff731dfbd10002, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef84f3909f1634b44aff731dfbd10002, type: 3}
       propertyPath: m_IsActive
