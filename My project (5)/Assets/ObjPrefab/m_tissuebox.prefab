@@ -64,9 +64,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6846460522910759812, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6754589305164128194, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4773148641032111892, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -4593869581333620052, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3528114545205036964, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1049698522109624292, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
       propertyPath: m_Name
       value: m_tissuebox
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
       propertyPath: m_IsActive
@@ -75,6 +103,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
       propertyPath: m_TagString
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472974518048870239, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2240081768708210214, guid: b11f34f6bae77f24391c9e7fe3b4d311, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

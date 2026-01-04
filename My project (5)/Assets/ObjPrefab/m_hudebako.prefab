@@ -65,12 +65,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 784907995290070898, guid: 2a15008ed2887fd40959096f02022cb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 784907995290070898, guid: 2a15008ed2887fd40959096f02022cb1, type: 3}
       propertyPath: m_TagString
       value: Target
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a15008ed2887fd40959096f02022cb1, type: 3}
       propertyPath: m_Name
       value: m_hudebako
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a15008ed2887fd40959096f02022cb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2a15008ed2887fd40959096f02022cb1, type: 3}
       propertyPath: m_IsActive

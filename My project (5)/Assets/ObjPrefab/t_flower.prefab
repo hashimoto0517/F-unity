@@ -69,12 +69,20 @@ PrefabInstance:
       value: t_flower
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a034348c7078814dbacc0ad9e835a71, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a034348c7078814dbacc0ad9e835a71, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a034348c7078814dbacc0ad9e835a71, type: 3}
       propertyPath: m_TagString
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 4374548663021996442, guid: 9a034348c7078814dbacc0ad9e835a71, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1968749373849819472, guid: 9a034348c7078814dbacc0ad9e835a71, type: 3}

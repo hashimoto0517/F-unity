@@ -69,12 +69,20 @@ PrefabInstance:
       value: t_Figure
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 34cedaf10054f134387738984c6f8c7e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34cedaf10054f134387738984c6f8c7e, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 34cedaf10054f134387738984c6f8c7e, type: 3}
       propertyPath: m_TagString
       value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: 34cedaf10054f134387738984c6f8c7e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

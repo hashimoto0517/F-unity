@@ -57,12 +57,20 @@ PrefabInstance:
       value: m_darumaotoshi-noface
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3cca0a0922b3eef48b1ee053f340c27a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3cca0a0922b3eef48b1ee053f340c27a, type: 3}
       propertyPath: m_TagString
       value: Target
       objectReference: {fileID: 0}
     - target: {fileID: 1957789576101412145, guid: 3cca0a0922b3eef48b1ee053f340c27a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251648729291788562, guid: 3cca0a0922b3eef48b1ee053f340c27a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
