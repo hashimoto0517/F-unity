@@ -20,15 +20,15 @@ public class lifeManegerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(currentLife <= 0)
+        if(currentLife <= 0)
         {
             //end
-            comment1p.text = "Failed";
-            comment2p.text = "Failed";
+            //comment1p.text = "Failed";
+            //comment2p.text = "Failed";
 
             Invoke(nameof(End), 1.5f);
 
-        }*/
+        }
     }
 
     void End()

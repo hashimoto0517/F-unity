@@ -2510,7 +2510,10 @@ MonoBehaviour:
   sideB: {fileID: 146425225}
   judgeScript: {fileID: 1229986081}
   audioSource: {fileID: 5276691263009054952}
-  trySelectSeClip: {fileID: 8300000, guid: 9ee96d3a4b710904992f153540f8d357, type: 3}
+  trySelectClip: {fileID: 8300000, guid: 9ee96d3a4b710904992f153540f8d357, type: 3}
+  SelectClip: {fileID: 8300000, guid: aff55fc2bef6412489474c6668161905, type: 3}
+  correctClip: {fileID: 8300000, guid: 145010201c5f27348889e1963489a129, type: 3}
+  incorrectClip: {fileID: 8300000, guid: cf2eb036a0b25284bbd7c094dbac6e46, type: 3}
 --- !u!82 &5276691263009054952
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2706,7 +2709,10 @@ MonoBehaviour:
   sideB: {fileID: 403034711}
   judgeScript: {fileID: 1229986081}
   audioSource: {fileID: 8140139686062044217}
-  trySelectSeClip: {fileID: 8300000, guid: 9ee96d3a4b710904992f153540f8d357, type: 3}
+  trySelectClip: {fileID: 8300000, guid: 9ee96d3a4b710904992f153540f8d357, type: 3}
+  SelectClip: {fileID: 8300000, guid: aff55fc2bef6412489474c6668161905, type: 3}
+  correctClip: {fileID: 8300000, guid: 145010201c5f27348889e1963489a129, type: 3}
+  incorrectClip: {fileID: 8300000, guid: cf2eb036a0b25284bbd7c094dbac6e46, type: 3}
 --- !u!82 &8140139686062044217
 AudioSource:
   m_ObjectHideFlags: 0
