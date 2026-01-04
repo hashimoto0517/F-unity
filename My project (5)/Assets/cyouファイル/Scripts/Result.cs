@@ -20,6 +20,7 @@ public class Result : MonoBehaviour
         int lifecount = lifeManegerScript.staticlifeManegerScript.currentLife;
         correctresultImage.sprite = number[numberofmistakes];
         liferesultImage.sprite = number[lifecount];
+
         if (lifecount >= 3 && numberofmistakes == 10)
         {
             illustration.sprite = perfect;
@@ -28,14 +29,29 @@ public class Result : MonoBehaviour
         {
             illustration.sprite = clear;
         }
-        else if (lifecount == 0 || numberofmistakes < 6)
+        else if (lifecount == 0)
         {
-            illustration.sprite = lifeDefeat;
+            if (numberofmistakes >= 8)
+            {
+                illustration.sprite = clear;
+            }
+            else
+            {
+                illustration.sprite = lifeDefeat;
+            }
         }
-        else if (lifecount >= 1 || numberofmistakes < 6)
+        else
         {
-            illustration.sprite = timeDefeat;
+            if (numberofmistakes >= 8)
+            {
+                illustration.sprite = clear;
+            }
+            else
+            {
+                illustration.sprite = timeDefeat;
+            }
         }
+
 
     }
 
