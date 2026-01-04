@@ -103,6 +103,7 @@ public class judgeScript : MonoBehaviour
 
     void ResetSelections()
     {
+        Debug.Log("ƒŠƒZƒbƒg");
         comment1p.gameObject.SetActive(false);
         comment2p.gameObject.SetActive(false);
 
