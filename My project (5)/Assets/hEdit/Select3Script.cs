@@ -24,6 +24,10 @@ public class Select3Script : MonoBehaviour
     [SerializeField] AudioClip correctClip;
     [SerializeField] AudioClip incorrectClip;
 
+    [SerializeField] Camera mainCamera;
+    [SerializeField] Camera subCamera;
+    bool isFirstPerson;
+    [SerializeField] float rayDistance = 50f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +43,13 @@ public class Select3Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        isFirstPerson = mainCamera.gameObject.activeInHierarchy;
+        if (isFirstPerson)
+        {
+            SelectFirst();
+        }
+
         if (selectAction != null && selectAction.WasPressedThisFrame())
         {
             TrySelect();
@@ -47,6 +58,24 @@ public class Select3Script : MonoBehaviour
         if (deselectAction != null && deselectAction.WasPressedThisFrame())
         {
             TryDeselect();
+        }
+    }
+
+    void SelectFirst()
+    {
+        Vector3 origin = mainCamera.transform.position + Vector3.down * 2.5f; 
+        Ray ray = new Ray(origin, mainCamera.transform.forward); 
+
+        Debug.DrawRay(origin, mainCamera.transform.forward * rayDistance, Color.red);
+        
+        if (Physics.SphereCast(ray, 1f, out RaycastHit hit, rayDistance))
+        { 
+            if (hit.collider.CompareTag("Target")) 
+                currentTarget = hit.collider; else currentTarget = null; 
+        } 
+        else 
+        { 
+            currentTarget = null; 
         }
     }
 
@@ -62,9 +91,13 @@ public class Select3Script : MonoBehaviour
 
     private void TryDeselect()
     {
-        if (currentTarget == null || !currentTarget.CompareTag("Target"))
+        if (selectedObject == null)
             return;
-        Deselect(currentTarget.gameObject);
+
+        audioSource.PlayOneShot(trySelectClip);
+
+        Deselect(selectedObject);
+        sideA.gameObject.SetActive(false);
     }
 
     void Select(GameObject obj)
@@ -99,7 +132,6 @@ public class Select3Script : MonoBehaviour
 
         Debug.Log($"{playerNumber}pëIëâèú: {obj.name}");
 
-        sideA.gameObject.SetActive(false);
         sideB.gameObject.SetActive(false);
     }
 
@@ -124,14 +156,20 @@ public class Select3Script : MonoBehaviour
         if (currentInfo != null)
         { 
             sideA.sprite = currentInfo.categoryImage;
-            sideA.gameObject.SetActive (true);
+            sideA.gameObject.SetActive(true);
         }
+
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Target"))
             currentTarget = other;
+    }
+
+    void OnTriggerStay(Collider other)
+    { 
+        if (other.CompareTag("Target")) currentTarget = other; 
     }
 
     void OnTriggerExit(Collider other)

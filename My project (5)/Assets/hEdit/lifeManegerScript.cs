@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class lifeManegerScript : MonoBehaviour
 {
     public static lifeManegerScript staticlifeManegerScript;
-    public int maxLife = 2;          // 最大ライフ
+    public int maxLife = 3;          // 最大ライフ
     public int currentLife;          // 現在のライフ
 
     //[SerializeField] TextMeshProUGUI comment1p;

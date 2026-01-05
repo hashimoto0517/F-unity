@@ -46,8 +46,8 @@ public class CorrectNumManegerScript : MonoBehaviour
         if (correctNum == denominator)
         {
             //end
-            comment1p.text = "Clear";
-            comment2p.text = "Clear";
+            //comment1p.text = "Clear";
+            //comment2p.text = "Clear";
 
             Invoke(nameof(End), 1.5f);
 

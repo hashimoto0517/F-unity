@@ -91,6 +91,7 @@ public class Select1Script : MonoBehaviour
     {
         if (currentTarget == null || !currentTarget.CompareTag("Target"))
             return;
+        audioSource.PlayOneShot(trySelectClip);
         Deselect(currentTarget.gameObject);
     }
 
