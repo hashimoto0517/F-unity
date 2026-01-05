@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CorrectNumManegerScript : MonoBehaviour
 {
+    public static CorrectNumManegerScript staticcorrectNumManegerScript;
     public int correctNum = 0;
     public int denominator;
     [SerializeField] TextMeshProUGUI comment1p;
@@ -13,6 +14,18 @@ public class CorrectNumManegerScript : MonoBehaviour
     [SerializeField] ramdomScript ramdomScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        if (staticcorrectNumManegerScript == null)
+        {
+            staticcorrectNumManegerScript = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     void Start()
     {
         denominator = ramdomScript.differenceNum;

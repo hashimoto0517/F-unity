@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
+    //public static CountdownTimer staticCountdownTimer;
     // 既存の3桁タイマー部分
     [SerializeField] private Image minImage;     // 分
     [SerializeField] private Image tenImage;     // 秒の10の位
@@ -21,6 +22,15 @@ public class CountdownTimer : MonoBehaviour
     // 最後の10秒演出用
     private bool isFinalCountdownActive = false;
     private int displayedNumber = -1;   // 最後に表示した数字（重複表示防止用）
+    // void Awake()
+    // {
+    //     if (staticCountdownTimer == null)
+    //     {
+    //         staticCountdownTimer = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     DontDestroyOnLoad(gameObject);
+    // }
 
     void Start()
     {
@@ -99,12 +109,12 @@ public class CountdownTimer : MonoBehaviour
             else
             {
                 // 範囲外なら非表示
-                countdownCenterImage.enabled = false;
-            }
-        }
-        else if (countdownCenterImage != null)
-        {
+                    countdownCenterImage.enabled = false;
+            }    
+        }    
+        else     if (countdownCenterImage != null)
+            {
             countdownCenterImage.enabled = false;
-        }
-    }
-}
+            }
+    }    
+}                   
