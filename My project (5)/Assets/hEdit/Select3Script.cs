@@ -10,8 +10,8 @@ public class Select3Script : MonoBehaviour
     [SerializeField] Image sideB;
     [SerializeField] judgeScript judgeScript;
 
-    public GameObject selectedObject = null;
-    public Collider currentTarget = null;
+    private GameObject selectedObject = null;
+    private Collider currentTarget = null;
     private PlayerInput playerInput;
     private InputAction selectAction;
     private InputAction deselectAction;

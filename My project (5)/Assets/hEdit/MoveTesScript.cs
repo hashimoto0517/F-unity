@@ -14,6 +14,9 @@ public class MoveTes : MonoBehaviour
 
     private Vector2 moveInput;
 
+    [SerializeField] Camera mainCamera;
+    [SerializeField] Camera subCamera;
+
     void Start()
     {
         // ‰ŠúˆÊ’u‚ğŠî€‚ÉˆÚ“®”ÍˆÍ‚ğŒˆ’è
@@ -30,6 +33,11 @@ public class MoveTes : MonoBehaviour
 
     void Update()
     {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        { 
+            ToggleViewMode(); 
+        }
+
         // “ü—Í‚ÉŠî‚Ã‚¢‚ÄˆÚ“®
         Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
         transform.Translate(move * Time.deltaTime * speed);
@@ -45,5 +53,12 @@ public class MoveTes : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+    }
+
+    void ToggleViewMode()
+    { 
+        bool mainActive = mainCamera.gameObject.activeSelf;
+        mainCamera.gameObject.SetActive(!mainActive);
+        subCamera.gameObject.SetActive(mainActive); 
     }
 }

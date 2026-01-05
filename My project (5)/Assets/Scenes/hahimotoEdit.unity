@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &2716000 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 179006058970141497, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
-  m_PrefabInstance: {fileID: 5276691263009054941}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5276691263009054942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a06d705dd213514187799bcdc745b6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &72106561 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1759656248061525470, guid: 5102beabe15ef6c468ff1a8c6c22248a, type: 3}
@@ -412,6 +401,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!20 &337533070 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2898012540429541682, guid: c993e8ec0ab60b64ab88b6a7f6c91803, type: 3}
+  m_PrefabInstance: {fileID: 3757696938158030351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &403034711 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5868309437597294535, guid: 3dbea20ce24254342a2f876406d39a4a, type: 3}
@@ -557,6 +551,11 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433255149}
   m_Enabled: 1
+--- !u!20 &433255157 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1902848042809460517, guid: c993e8ec0ab60b64ab88b6a7f6c91803, type: 3}
+  m_PrefabInstance: {fileID: 3757696938158030351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &437503193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5736677035709149231, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
@@ -570,6 +569,11 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437503193}
   m_Enabled: 1
+--- !u!20 &437503201 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1760793212961572851, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
+  m_PrefabInstance: {fileID: 5276691263009054941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &626259765
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +619,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &663088800 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3621147497999820118, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
+  m_PrefabInstance: {fileID: 5276691263009054941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,7 +1939,7 @@ PrefabInstance:
     - target: {fileID: 8455193363337396765, guid: b2d77fc9023de1f469adea1165e8c2ec, type: 3}
       propertyPath: Select1p3Script
       value: 
-      objectReference: {fileID: 2716000}
+      objectReference: {fileID: 0}
     - target: {fileID: 8455193363337396765, guid: b2d77fc9023de1f469adea1165e8c2ec, type: 3}
       propertyPath: Select2p3Script
       value: 
@@ -2272,9 +2281,17 @@ PrefabInstance:
       propertyPath: Side2p_2pText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1834497409670633368, guid: c993e8ec0ab60b64ab88b6a7f6c91803, type: 3}
+      propertyPath: subCamera
+      value: 
+      objectReference: {fileID: 433255157}
+    - target: {fileID: 1834497409670633368, guid: c993e8ec0ab60b64ab88b6a7f6c91803, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 337533070}
     - target: {fileID: 2510363228253590365, guid: c993e8ec0ab60b64ab88b6a7f6c91803, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41
+      value: 37.74
       objectReference: {fileID: 0}
     - target: {fileID: 2510363228253590365, guid: c993e8ec0ab60b64ab88b6a7f6c91803, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2474,7 +2491,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6013104049843694436, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
+      propertyPath: subCamera
+      value: 
+      objectReference: {fileID: 437503201}
+    - target: {fileID: 6013104049843694436, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 663088800}
+    m_RemovedComponents:
+    - {fileID: 179006058970141497, guid: 1da0c0ca13e17e445ae90fcbd08abde6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
