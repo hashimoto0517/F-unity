@@ -7,6 +7,7 @@ public class CorrectNumManegerScript : MonoBehaviour
     public static CorrectNumManegerScript staticcorrectNumManegerScript;
     public int correctNum = 0;
     public int denominator;
+
     [SerializeField] TextMeshProUGUI comment1p;
     [SerializeField] TextMeshProUGUI comment2p;
     [SerializeField] correctUIScript uiScript1P;
@@ -34,15 +35,6 @@ public class CorrectNumManegerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void Correct()
-    {
-        correctNum++;
-        uiScript1P.UpdateCorrectUI();
-        uiScript2P.UpdateCorrectUI();
-
         if (correctNum == denominator)
         {
             //end
@@ -52,6 +44,15 @@ public class CorrectNumManegerScript : MonoBehaviour
             Invoke(nameof(End), 1.5f);
 
         }
+    }
+
+    public void Correct()
+    {
+        correctNum++;
+        uiScript1P.UpdateCorrectUI();
+        uiScript2P.UpdateCorrectUI();
+
+        
 
     }
     void End()

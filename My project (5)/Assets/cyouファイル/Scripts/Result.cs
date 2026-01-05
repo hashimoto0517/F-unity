@@ -11,17 +11,37 @@ public class Result : MonoBehaviour
     public Image correctresultImage;
     public Image liferesultImage;
     public Image illustration;
+    public Image jyuuketa;
     public Sprite[] number;
+    public GameObject jyuugameobject;
+
+    public int numberofmistakes;
+    public int lifecount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int numberofmistakes = CorrectNumManegerScript.staticcorrectNumManegerScript.correctNum;
-        int lifecount = lifeManegerScript.staticlifeManegerScript.currentLife;
-        correctresultImage.sprite = number[numberofmistakes];
-        liferesultImage.sprite = number[lifecount];
+        numberofmistakes = CorrectNumManegerScript.staticcorrectNumManegerScript.correctNum;
+        lifecount = lifeManegerScript.staticlifeManegerScript.currentLife;
 
-        if (lifecount >= 3 && numberofmistakes == 10)
+        jyuuketa.sprite = number[0];
+
+        if(numberofmistakes<10)
+        {
+            jyuugameobject.SetActive(false);
+            correctresultImage.sprite = number[numberofmistakes];
+            liferesultImage.sprite = number[lifecount];
+        }
+
+
+        if (numberofmistakes == 10 && lifecount > 2) 
+        {
+            jyuuketa.sprite = number[1];
+            correctresultImage.sprite = number[0];
+            liferesultImage.sprite = number[3];
+        }
+
+        if (lifecount >= 2 && numberofmistakes > 9)
         {
             illustration.sprite = perfect;
         }
