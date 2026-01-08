@@ -10,45 +10,34 @@ public class K_CameraScript : MonoBehaviour
     [SerializeField] GameObject Camerahold;
     [SerializeField] float distance = 5f;        // プレイヤーとの距離
     [SerializeField] float height = 2f;          // カメラ高さ
-
     private PlayerInput playerInput;
-
     private InputAction cameraSwitchAction;      // RBボタンの入力
     private InputAction cameraRotateAction;      // 右スティックの入力
-
     private float mainCameraPitch = 0f;          // 一人称カメラの上下回転
     private float mainCameraYaw = 0f;            // 一人称カメラの左右回転
     private float subCameraPitch = 0f;           // 三人称カメラの上下回転
     private float subCameraYaw = 0f;             // 三人称カメラの左右回転
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // サブカメラを非アクティブにする
+        // サブカメラを非表示
         if (subCamera != null)
         {
             subCamera.SetActive(false);
         }
         else
         {
-            Debug.LogError("SubCamera is not assigned in the Inspector!");
+            Debug.LogError("サブカメラなし");
         }
 
         if (mainCamera == null)
         {
-            Debug.LogError("MainCamera is not assigned in the Inspector!");
+            Debug.LogError("メインカメラなし");
         }
-
-     
-
         playerInput = player.GetComponent<PlayerInput>();
-
         // RB
         cameraSwitchAction = playerInput.actions.FindAction("CameraSwitch");
         // 右スティック
         cameraRotateAction = playerInput.actions.FindAction("CameraRotate");
-
-
         // 初期位置設定
         if (mainCamera.activeSelf)
         {
@@ -59,8 +48,6 @@ public class K_CameraScript : MonoBehaviour
             UpdateThirdPersonCameraPosition(subCamera);
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
         // RBでカメラ切り替え
@@ -72,7 +59,7 @@ public class K_CameraScript : MonoBehaviour
                 {
                     mainCamera.SetActive(false);
                     subCamera.SetActive(true);
-                    // メインカメラの視線方向をサブカメラに引き継ぐ
+                    // メインカメラの方向をサブカメラに引き継ぐ
                     if (player != null && mainCamera != null)
                     {
                         Vector3 mainCameraForward = mainCamera.transform.forward;
@@ -84,7 +71,7 @@ public class K_CameraScript : MonoBehaviour
                         subCameraPitch = Mathf.Clamp(subCameraPitch, -70f, 50f); // 自然な高さにする
                     }
                     UpdateThirdPersonCameraPosition(subCamera); // 三人称カメラ位置を更新
-                    Debug.Log("Switched to SubCamera (Third Person)");
+                    Debug.Log("三人称");
                 }
                 else
                 {
@@ -101,11 +88,10 @@ public class K_CameraScript : MonoBehaviour
                         mainCameraPitch = Mathf.Clamp(mainCameraPitch, -80f, 80f);
                     }
                     UpdateFirstPersonCameraPosition(mainCamera); //カメラ位置を更新
-                    Debug.Log("Switched to MainCamera (First Person)");
+                    Debug.Log("一人称");
                 }
             }
         }
-
         if (cameraRotateAction != null)
         {
             // 入力を取得
@@ -121,14 +107,14 @@ public class K_CameraScript : MonoBehaviour
                     mainCameraYaw += stickInput.x * rotationSpeed * Time.deltaTime;
                     mainCameraPitch -= stickInput.y * rotationSpeed * Time.deltaTime;
                     mainCameraPitch = Mathf.Clamp(mainCameraPitch, -50f, 40f);
-                    UpdateFirstPersonCameraPosition(mainCamera); // 一人称（自転）
+                    UpdateFirstPersonCameraPosition(mainCamera); // 一人称
                 }
                 else
                 {
                     // 三人称カメラの回転
                     subCameraYaw += stickInput.x * rotationSpeed * Time.deltaTime;
                     subCameraPitch -= stickInput.y * rotationSpeed * Time.deltaTime;
-                    subCameraPitch = Mathf.Clamp(subCameraPitch, -90f, 90f); // ピッチ制限
+                    subCameraPitch = Mathf.Clamp(subCameraPitch, -90f, 90f); // 制限
                     UpdateThirdPersonCameraPosition(subCamera); // 三人称
                 }
             }
@@ -138,34 +124,27 @@ public class K_CameraScript : MonoBehaviour
     private void UpdateThirdPersonCameraPosition(GameObject camera)
     {
         if (player == null || camera == null) return;
-
         // カメラの位置を計算
         Vector3 CameraholdPos = Camerahold.transform.position;
         float x = CameraholdPos.x + Mathf.Sin(subCameraYaw * Mathf.Deg2Rad) * distance;
         float z = CameraholdPos.z + Mathf.Cos(subCameraYaw * Mathf.Deg2Rad) * distance;
-        float y = CameraholdPos.y + height + Mathf.Sin(subCameraPitch * Mathf.Deg2Rad) * distance * 1.0f; // 高さの変化を抑える
-
+        float y = CameraholdPos.y + height + Mathf.Sin(subCameraPitch * Mathf.Deg2Rad) * distance * 1.0f;
         // カメラの位置設定
         camera.transform.position = new Vector3(x, y, z);
-
         // カメラをプレイヤーに向ける
         Vector3 directionToPlayer = CameraholdPos - camera.transform.position;
         camera.transform.rotation = Quaternion.LookRotation(directionToPlayer, Vector3.up);
     }
-
     // 一人称カメラの位置と向きを更新
     private void UpdateFirstPersonCameraPosition(GameObject camera)
     {
         if (player == null || camera == null) return;
-
         // カメラをプレイヤーの位置に設定
         Vector3 playerPos = player.transform.position + new Vector3(0, height, 0);
         camera.transform.position = playerPos;
-
         // カメラ回転を更新
         camera.transform.rotation = Quaternion.Euler(mainCameraPitch, mainCameraYaw, 0f);
     }
-
     // スクリプトが破棄される際にアクションを無効化
     void OnDestroy()
     {

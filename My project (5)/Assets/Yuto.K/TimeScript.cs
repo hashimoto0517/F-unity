@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
-    //public static CountdownTimer staticCountdownTimer;
-    // 既存の3桁タイマー部分
     [SerializeField] private Image minImage;     // 分
     [SerializeField] private Image tenImage;     // 秒の10の位
     [SerializeField] private Image oneImage;     // 秒の1の位
@@ -13,25 +11,13 @@ public class CountdownTimer : MonoBehaviour
 
     [SerializeField] private float countdownTime = 180f;    // 開始時間（秒）
     [SerializeField] private float delayBeforeEnd = 3f;     // 0秒後の遅延
-    //最後の10秒カウントダウン表示
-    [SerializeField] private Image countdownCenterImage;    // 画面中央に大きく表示するIイメージ
-    [SerializeField] private Sprite[] countdownSprites;     // 10,9,8,...,1 のスプライト
+    [SerializeField] private Image countdownCenterImage;    // カウントダウンのイメージ
+    [SerializeField] private Sprite[] countdownSprites;     // カウントダウンのスプライト
     public float currentTime;
     private bool isCounting;
     private bool isDelaying;
-    // 最後の10秒演出用
     private bool isFinalCountdownActive = false;
-    private int displayedNumber = -1;   // 最後に表示した数字（重複表示防止用）
-    // void Awake()
-    // {
-    //     if (staticCountdownTimer == null)
-    //     {
-    //         staticCountdownTimer = this;
-    //         DontDestroyOnLoad(gameObject);
-    //     }
-    //     DontDestroyOnLoad(gameObject);
-    // }
-
+    private int displayedNumber = -1;   // 最後に表示した数字
     void Start()
     {
         currentTime = countdownTime;
@@ -39,7 +25,7 @@ public class CountdownTimer : MonoBehaviour
         isDelaying = false;
         isFinalCountdownActive = false;
         displayedNumber = -1;
-        // 最初は中央カウントダウンを非表示
+        // 最初は非表示
         if (countdownCenterImage != null)
         {
             countdownCenterImage.enabled = false;
@@ -51,7 +37,6 @@ public class CountdownTimer : MonoBehaviour
         if (isCounting)
         {
             currentTime -= Time.deltaTime;
-
             // 残り10秒以下
             if (currentTime <= 11f && !isFinalCountdownActive)
             {
@@ -62,7 +47,6 @@ public class CountdownTimer : MonoBehaviour
                 currentTime = 0;
                 isCounting = false;
                 isDelaying = true;
-                // 最終カウントダウン終了
                 if (countdownCenterImage != null)
                 {
                     countdownCenterImage.enabled = false;
@@ -85,7 +69,7 @@ public class CountdownTimer : MonoBehaviour
         int minutes = totalSeconds / 60;
         int seconds = totalSeconds % 60;
 
-        // 通常の3桁タイマー更新
+        // タイマー更新
         if (minImage != null) minImage.sprite = numberSprites[minutes];
         if (tenImage != null) tenImage.sprite = numberSprites[seconds / 10];
         if (oneImage != null) oneImage.sprite = numberSprites[seconds % 10];
@@ -105,16 +89,7 @@ public class CountdownTimer : MonoBehaviour
                         displayedNumber = secondsLeft;
                     }
                 }
-            }
-            else
-            {
-                // 範囲外なら非表示
-                    countdownCenterImage.enabled = false;
-            }    
+            }  
         }    
-        else     if (countdownCenterImage != null)
-            {
-            countdownCenterImage.enabled = false;
-            }
     }    
 }                   
